@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EJERCICIO 5</title>
+    <link rel="stylesheet" href="style.css" type="text/css" media="screen" charset="utf-8" />
+    <script type="text/javascript">
+        var colorFondo;
+        var colorTexto;
+
+        colorFondo = prompt("Elige color para el fondo (R, A, Y, V): ", "");
+        colorTexto = prompt("Elige color para el fondo (R, A, Y, V): ", "");
+
+
+        switch (colorFondo) {
+            case "R": colorFondo = "red";
+                break;
+            case "A": colorFondo = "blue";
+                break;
+            case "Y": colorFondo = "yellow";
+                break;
+            case "V": colorFondo = "green";
+                break;
+        }
+
+        switch (colorTexto) {
+            case "R": color = "red";
+                break;
+            case "A": color = "blue";
+                break;
+            case "Y": color = "yellow";
+                break;
+            case "V": color = "green";
+                break;
+        }
+
+        document.write("<table  bgcolor=", colorFondo, ">");
+        document.write("<tr><td><font color=", color, ">dsdsdsds</font></td></tr>");
+        document.write("</table>");
+
+
+
+    </script>
+</head>
+
+<body><a href="../index.html">Volver</a><br><br>
+</body>
+
+</html>

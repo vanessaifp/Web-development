@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EJERCICIO 2</title>
+
+  <link rel="stylesheet" href="style.css" type="text/css" media="screen" charset="utf-8" />
+  <script type="text/javascript">
+    var miArray = [true, 5, false, "hola", "adios", 2];
+
+    if (miArray[3] > miArray[4]) {
+      document.write("Entre los dos textos, el mayor es: ", miArray[3]);
+    } else {
+      document.write("Entre los dos textos, el mayor es: ", miArray[4]);
+    }
+    document.write("<br>");
+    var texto1 = miArray[3].toUpperCase();
+    var texto2 = miArray[4].toUpperCase();
+    document.write(
+      "los dos textos en mayusculas son: ",
+      texto1,
+      " y ",
+      texto2
+    );
+    document.write("<br>");
+    document.write("Operaciones matemáticas");
+    document.write("<br>");
+    document.write("Suma: ", miArray[1] + miArray[5]); 4
+    document.write("<br>");
+    document.write("Multiplicación: ", miArray[1] * miArray[5]);
+    document.write("<br>");
+    document.write("Resta: ", miArray[1] - miArray[5]);
+    document.write("<br>");
+    document.write("Division: ", miArray[1] / miArray[5]);
+    document.write("<br>");
+    document.write("Módulo: ", miArray[1] % miArray[5]);
+
+    document.write("<br>");
+    if (miArray[0] && !miArray[2]) {
+      document.write("TRUE");
+    }
+
+    document.write("<br>");
+    if (!miArray[0] && miArray[2]) {
+      document.write("FALSE");
+    }
+
+
+  </script>
+</head>
+
+<body>
+  <a href="../index.html">Volver</a><br><br>
+</body>
+
+</html>

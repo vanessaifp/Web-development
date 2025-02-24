@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Strict//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml' xml:lang='en' lang='en'>
+
+<head>
+    <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+    <title>IF ELSE</title>
+    <link rel='stylesheet' href='css/style.css' type='text/css' media='screen' charset='utf-8' />
+    <script type="text/javascript" src="js/script_ifelse.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>LENGUAJE JAVASCRIPT</h1>
+    </header>
+    <nav>
+        <a href="index.html">Volver a unidad 1</a>
+    </nav>
+    <h3>IF ELSE (Comprobar DNI)</h3>
+    <p>Introduce tu DNI y su letra para comprobar si es correcta:</p>
+    
+    <form onsubmit="return calculaLetra(event)">
+        <label for="numeroDNI">Número DNI (sin letra):</label>
+        <input type="number" id="numeroDNI" name="numeroDNI" required min="0" max="99999999">
+        
+        <label for="letraDNI">Letra:</label>
+        <input type="text" id="letraDNI" name="letraDNI" required maxlength="1" style="text-transform: uppercase;">
+        
+        <input type="submit" value="Comprobar Letra" class="boton">
+    </form>
+    
+    <div id="dni"></div>
+
+    <footer>
+        <p>Todos los derechos reservados</p>
+        <p>Vanessa Figueroa - 2025</p>
+    </footer>
+
+</body>
+
+</html>

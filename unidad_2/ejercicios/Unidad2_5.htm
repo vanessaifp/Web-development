@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5</title>
+    <style type="text/css"> 
+        body {font-family: arial, helvetica;}
+        #info {width:160px; border:thin solid silver; padding:.5em; position:fixed;}
+        #info h1 {margin: 0;}
+    </style>
+    <script type="text/javascript">
+        function informacion(elEvento) {
+            var evento = elEvento || window.event;
+            // evaluamos si movemos el raton o pulsamos una tecla del raton
+            switch (evento.type) {
+                case 'mousemove':
+                    //vemos si es Internet explorer o no
+                    var ie = navigator.userAgent.toLowerCase().indexOf('msie') != -1;
+                    var coordenadaXrelativa, coordenadaYrelativa, coordenadaXabsoluta, coordenadaYabsoluta;
+                    if (ie) {
+                        // si no se ha hecho scroll en la pagina capturamos coordenadas
+                        if (document.documentElement && document.documentElement.scrollTop) {
+                            coordenadaXabsoluta = evento.clientX + document.documentElement.scrollLeft;
+                            coordenadaYabsoluta = evento.clientY + document.documentElement.scrollTop;
+                        }
+                        //si se ha hecho scroll capturamos la posicion desde el body
+                        else {
+                            coordenadaXabsoluta = evento.clientX + document.body.scrollLeft;
+                            coordenadaYabsoluta = evento.clientY + document.body.scrollTop;
+                        }
+                    }
+                    else {
+                        coordenadaXabsoluta = evento.pageX;
+                        coordenadaYabsoluta = evento.pageY;
+                    }
+                    coordenadaXrelativa = evento.clientX;
+                    coordenadaYrelativa = evento.clientY;
+                    muestraInformacion(['Ratón', 'Navegador [' + coordenadaXrelativa + ', ' + coordenadaYrelativa + ']', 'Pagina [' + coordenadaXabsoluta + ', ' + coordenadaYabsoluta + ']']);
+                    break;
+                case 'keypress':
+                    var caracter = evento.charCode || evento.keyCode;
+                    var letra = String.fromCharCode(caracter);
+                    var codigo = letra.charCodeAt(0);
+                    muestraInformacion(['Teclado', 'Carácter [' + letra + ']', 'Código [' + codigo + ']']);
+                    break;
+            }
+        }
+
+        function muestraInformacion(mensaje) {
+            document.getElementById("info").innerHTML = '<h1>' + mensaje[0] + '</h1>';
+            for (var i = 1; i < mensaje.length; i++) {
+                document.getElementById("info").innerHTML += '<p>' + mensaje[i] + '</p>';
+            }
+        }
+
+        document.onmousemove = informacion;
+        document.onkeypress = informacion;
+ 
+    </script>
+</head>
+<body>
+    <a href="../index.html">Volver a inicio</a><br>
+    <div id="info">
+    </div>
+    <br />    <br />    <br />    <br />    <br />    <br />    <br />    <br />    <br />
+    <br />    <br />    <br />    <br />    <br />    <br />    <br />    <br />    <br />
+    <br />    <br />    <br />    <br />    <br />    <br />    <br />    <br />    <br />
+    <br />    <br />    <br />    <br />    <br />    <br />    <br />    <br />    <br />
+    <br />    <br />    <br />    <br />    <br />    <br />    <br />    <br />    <br />
+    <br />    <br />    <br />    <br />    <br />    <br />    <br />    <br />    <br />
+    <br />    <br />    <br />
+</body>
+</html>

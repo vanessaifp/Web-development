@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Strict//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml' xml:lang='es' lang='es'>
+
+<head>
+    <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+    <title>DO WHILE</title>
+    <link rel='stylesheet' href='css/style.css' type='text/css' media='screen' charset='utf-8' />
+    <script type="text/javascript" src="js/script_array_ordenar.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>LENGUAJE JAVASCRIPT </h1>
+    </header>
+    <nav>
+        <a href="index.html">Volver a unidad 1</a>
+    </nav>
+    <h3>Ordenar en Arrays</h3>
+    <p>Introduce tres nombres y decide cómo ordenarlos o separarlos:</p>
+
+    <form id="nombresForm" onsubmit="return false;">
+        <label for="nombre1">Nombre 1:</label>
+        <input type="text" id="nombre1" required />
+        <br />
+        <label for="nombre2">Nombre 2:</label>
+        <input type="text" id="nombre2" required />
+        <br />
+        <label for="nombre3">Nombre 3:</label>
+        <input type="text" id="nombre3" required />
+        <br />
+
+        <input type="radio" id="alfabetico" name="opcion" value="alfabetico" checked />
+        <label for="alfabetico">Alfabético</label>
+        <br />
+        <input type="radio" id="reves" name="opcion" value="reves" />
+        <label for="reves">Al revés</label>
+        <br />
+        <input type="radio" id="separado1" name="opcion" value="separado1" />
+        <label for="separado1">Separado por "-"</label>
+        <br />
+        <input type="radio" id="separado2" name="opcion" value="separado2" />
+        <label for="separado2">Separado por "/"</label>
+        <br />
+
+        <input type="button" value="Pulsame" id="boton" class="boton" onclick="responde()" />
+    </form>
+
+    <div id="texto"></div>
+
+    <footer>
+        <p>Todos los derechos reservados</p>
+        <p>Vanessa Figueroa - 2025</p>
+    </footer>
+
+
+</body>
+
+</html>

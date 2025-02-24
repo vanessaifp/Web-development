@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EJERCICIO 10</title>
+    <link rel="stylesheet" href="style.css" type="text/css" media="screen" charset="utf-8" />
+    <script type="text/javascript">
+        var imagenes = [
+            "b1948e502a23202fda42b6b7419cfdcd.jpg",
+            "Blancoyrosa.jpg",
+            "IMG-20240130-WA0038.jpg",
+            "IMG-20240215-WA0043.jpg",
+            "IMG-20240215-WA0044.jpg",
+            "IMG-20240215-WA0058.jpg",
+            "IMG-20240215-WA0059.jpg",
+            "IMG-20240215-WA0065.jpg"
+        ];
+        var i = 0;
+        var numeroImagenes = imagenes.length;
+
+        function posterior() {
+            if (i === numeroImagenes - 1) {
+                i = 0;
+            } else {
+                i++;
+            }
+            document.getElementById("fotos").src = imagenes[i];
+        }
+
+        function anterior() {
+            if (i === 0) {
+                i = numeroImagenes - 1;
+            } else {
+                i--;
+            }
+            document.getElementById("fotos").src = imagenes[i];
+        }
+
+        function aleatorio() {
+            i = Math.floor(Math.random() * imagenes.length);
+            document.getElementById("fotos").src = imagenes[i];
+        }
+
+        function cambiaFoto(form) {
+            var j = form.fotoelegida.selectedIndex - 1;
+            document.getElementById("fotos").src = imagenes[j];
+        }
+    </script>
+</head>
+
+<body>
+    <a href="../index.html">Volver</a><br><br>
+
+    <div class="imagen-container">
+        <img id="fotos" src="IMG-20240130-WA0038.jpg" alt="Imagen" />
+    </div><br>
+
+    <form name="formulario" method="post">
+        <p>
+            ELIJE FOTO
+            <select size="1" name="fotoelegida" onchange="cambiaFoto(this.form)">
+                <option value="" selected="selected">Selecciona foto</option>
+                <option value="foto1">foto1</option>
+                <option value="foto2">foto2</option>
+                <option value="foto3">foto3</option>
+                <option value="foto4">foto4</option>
+                <option value="foto5">foto5</option>
+                <option value="foto6">foto6</option>
+                <option value="foto7">foto7</option>
+                <option value="foto8">foto8</option>
+            </select>
+        </p>
+    </form>
+</body>
+
+</html>

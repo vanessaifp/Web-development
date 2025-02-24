@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EJERCICIO 6</title>
+
+    <link rel="stylesheet" href="style.css" type="text/css" media="screen" charset="utf-8" />
+    <script type="text/javascript">
+
+        var myArray = new Array(10);
+
+        for (i = 0; i < 10; i++) {
+            myArray[i] = prompt("Introduce un numero del 1 al 10");
+        }
+
+        document.write("<table border=1>")
+        document.write("<tr>");
+        for (i in myArray) {
+            document.write("<td>", myArray[i], "</td>");
+        }
+        document.write("</tr>");
+        document.write("</table>")
+
+        document.write("<table border=1>")
+        document.write("<tr>");
+        for (i in myArray) {
+            document.write("<td width=20 align=center>", myArray[9 - i], "</td>");
+        }
+        document.write("</tr>");
+        document.write("</table>")
+
+
+
+
+
+
+
+    </script>
+
+
+
+</head>
+
+<body> <a href="../index.html">Volver</a><br><br>
+</body>
+
+</html>

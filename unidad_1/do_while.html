@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>WHILE - Estructura de Control en JavaScript</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <script type="text/javascript" src="js/script_dowhile.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>LENGUAJE JAVASCRIPT</h1>
+    </header>
+    <nav>
+        <a href="index.html">Volver a unidad 1</a>
+    </nav>
+
+    <main>
+        <h3>Estructura de control de flujo DO-WHILE</h3>
+        <p>Introduce una nota entre 0 y 10:</p>
+
+        <!-- Formulario para ingresar la nota -->
+        <form id="notaForm" onsubmit="return comprobarNota()">
+            <label for="notaInput">Nota:</label>
+            <input type="number" id="notaInput" name="nota" min="0" max="10" step="1" required />
+            <button type="submit">Comprobar Nota</button>
+        </form>
+
+        <p id="resultado"></p>
+    </main>
+
+    <footer>
+        <p>Todos los derechos reservados</p>
+        <p>Vanessa Figueroa - 2025</p>
+    </footer>
+
+
+</body>
+</html>

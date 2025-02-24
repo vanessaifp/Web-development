@@ -1,0 +1,85 @@
+/* Estilos para la página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+/* Estilos para el contenedor del formulario */
+.container {
+    width: 80%;
+    max-width: 600px;
+    background-color: #ffffff; 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    margin-top: 50px; 
+}
+
+/* Estilo para el formulario */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+input[type="text"] {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 80%;
+    max-width: 400px;
+    font-size: 14px;
+}
+
+input[type="submit"] {
+    background-color: #E91E63; 
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 50%;
+    max-width: 200px;
+}
+
+input[type="submit"]:hover {
+    background-color: #C2185B; 
+}
+
+.form-group {
+    margin-bottom: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Estilos para el enlace 'Volver' */
+a {
+    position: absolute; 
+    top: 20px; 
+    left: 20px; 
+    text-decoration: none;
+    font-size: 16px;
+    color: #E91E63; 
+}
+
+a:hover {
+    color: #C2185B; 
+}

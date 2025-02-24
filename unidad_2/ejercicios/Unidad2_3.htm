@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3</title>
+    <script type="text/javascript">
+        function anade() {
+
+            var lista = document.getElementById("lista");
+
+
+            var nuevoElemento = document.createElement("li");
+
+
+            nuevoElemento.textContent = "Nuevo elemento de la lista";
+
+
+            lista.appendChild(nuevoElemento);
+        }
+    </script>
+</head>
+
+<body>
+    <nav>
+        <a href="../index.html">Volver a página inicial</a>
+    </nav>
+    <ul id="lista">
+        <li>elemento de la lista1</li>
+        <li>elemento de la lista2</li>
+        <li>elemento de la lista3</li>
+        <li>elemento de la lista4</li>
+        <li>elemento de la lista5</li>
+    </ul>
+    <input type="button" value="Añadir elemento" onclick="anade();">
+</body>
+
+</html>

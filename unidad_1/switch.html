@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Strict//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml' xml:lang='es' lang='es'>
+
+<head>
+    <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+    <title>SWITCH</title>
+    <link rel='stylesheet' href='css/style.css' type='text/css' media='screen' charset='utf-8' />
+    <script type="text/javascript" src="js/script_switch.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>LENGUAJE JAVASCRIPT</h1>
+    </header>
+    <nav>
+        <a href="index.html">Volver a unidad 1</a>
+    </nav>
+    <h3>Estructura de control de flujo SWITCH</h3>
+    <p>Selecciona un día de la semana para conocer el horario de apertura:</p>
+    
+    <form onsubmit="return horario(event)">
+        <label for="diaSemana">Día de la semana:</label>
+        <select id="diaSemana" name="diaSemana" required>
+            <option value="">--Selecciona un día--</option>
+            <option value="lu">Lunes</option>
+            <option value="ma">Martes</option>
+            <option value="mi">Miércoles</option>
+            <option value="ju">Jueves</option>
+            <option value="vi">Viernes</option>
+            <option value="sa">Sábado</option>
+            <option value="do">Domingo</option>
+        </select>
+        
+        <input type="submit" class="boton" value="Consulta horario">
+    </form>
+    
+    <div id="resultado"></div>
+
+    <footer>
+        <p>Todos los derechos reservados</p>
+        <p>Vanessa Figueroa - 2025</p>
+    </footer>
+
+</body>
+
+</html>

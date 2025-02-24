@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" type="text/css" media="screen" charset="utf-8" />
+    <title>EJERCICIO 11</title>
+    <script type="text/javascript">
+        function Validar_datos() {
+            let sw = -1; // Variable de control para ver si se producen errores
+
+            if (!Comprobar_nombre()) sw = 0; // Es erróneo
+            if (!Comprobar_edad()) sw = 1; // Es erróneo
+            if (!Comprobar_codpostal()) sw = 3; // Es erróneo
+
+            if (sw != -1) {
+                Cursor(sw);
+                return false; // Hay algún error
+            }
+            else return true; // No hay errores, formulario verificado
+        }
+
+        // Función que hace que el foco se sitúe en el campo erróneo y se seleccione
+        function Cursor(I) {
+            document.forms["FORMULARIO"].elements[I].focus();
+            document.forms["FORMULARIO"].elements[I].select();
+        }
+
+        // Comprobamos si el nombre es correcto
+        function Comprobar_nombre() {
+            let nombre = document.forms["FORMULARIO"].elements["nombre"].value;
+            if (nombre == "") {
+                alert("Has de introducir datos en el Nombre y Apellidos");
+                return false;
+            }
+            // Comprobar si hay caracteres numéricos en el nombre (debe revisar todo el texto)
+            if (/\d/.test(nombre)) {
+                alert("El nombre no puede contener números");
+                return false;
+            }
+            return true;
+        }
+
+        // Comprobamos si la edad es correcta
+        function Comprobar_edad() {
+            let edad = document.forms["FORMULARIO"].elements["edad"].value;
+            if (edad == "") return true;
+            if (!Comprobar_numero(edad)) return false;
+            if (parseInt(edad) < 0 || parseInt(edad) > 120) {
+                alert("La EDAD no está en los límites 0 y 120");
+                return false;
+            }
+            return true;
+        }
+
+        // Comprobamos si un dato es numérico
+        function Comprobar_numero(N) {
+            if (isNaN(N)) {
+                alert("Has de introducir números en el campo");
+                return false;
+            }
+            return true;
+        }
+
+        // Comprobamos si el código postal es correcto
+        function Comprobar_codpostal() {
+            let codPostal = document.forms["FORMULARIO"].elements["cp"].value;
+            if (codPostal == "") return true;
+            if (!Comprobar_numero(codPostal)) return false;
+            if (codPostal.length != 5) {
+                alert("El Código Postal ha de tener 5 dígitos");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+
+<body>
+    <!-- Enlace Volver en la parte superior izquierda -->
+    <a href="../index.html">Volver</a>
+
+    <div class="container">
+        <form name="FORMULARIO" onsubmit="return Validar_datos()" action="servidor.cgi">
+            <div class="form-group">
+                <label for="nombre">Nombre y apellidos:</label>
+                <input type="text" id="nombre" name="nombre" size="45" />
+            </div>
+            <div class="form-group">
+                <label for="edad">Edad:</label>
+                <input type="text" id="edad" name="edad" size="6" />
+            </div>
+            <div class="form-group">
+                <label for="direccion">Dirección:</label>
+                <input type="text" id="direccion" name="direccion" size="40" />
+            </div>
+            <div class="form-group">
+                <label for="cp">Código Postal:</label>
+                <input type="text" id="cp" name="cp" size="9" />
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Enviar datos" />
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

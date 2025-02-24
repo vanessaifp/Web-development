@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Strict//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml' xml:lang='es' lang='es'>
+
+<head>
+    <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+    <title>FOR</title>
+    <link rel='stylesheet' href='css/style.css' type='text/css' media='screen' charset='utf-8' />
+    <script type="text/javascript" src="js/script_for.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>LENGUAJE JAVASCRIPT </h1>
+    </header>
+    <nav>
+        <a href="index.html">Volver a unidad 1</a>
+    </nav>
+    <h3>Control de flujo FOR </h3>
+    <p>Introduce un texto y clica el botón para que te lo devuelva al revés:</p>
+
+    <!-- Formulario para ingresar texto -->
+    <form id="formulario" onsubmit="return false;">
+        <label for="textoInput">Texto:</label>
+        <input type="text" id="textoInput" name="texto" required />
+        <input type="button" value="Pulsa" onclick="cambiaOrden()" class="boton" />
+    </form>
+
+    <div id="texto"></div>
+
+    <footer>
+        <p>Todos los derechos reservados</p>
+        <p>Vanessa Figueroa - 2025</p>
+    </footer>
+
+</body>
+
+</html>

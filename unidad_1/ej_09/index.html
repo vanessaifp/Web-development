@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EJERCICIO 9</title>
+    <link rel='stylesheet' href='style.css' type='text/css' media='screen' charset='utf-8' />
+    <script type="text/javascript">
+        var imagenes = [
+            "b1948e502a23202fda42b6b7419cfdcd.jpg",
+            "Blancoyrosa.jpg",
+            "IMG-20240130-WA0038.jpg",
+            "IMG-20240215-WA0043.jpg",
+            "IMG-20240215-WA0044.jpg",
+            "IMG-20240215-WA0058.jpg",
+            "IMG-20240215-WA0059.jpg",
+            "IMG-20240215-WA0065.jpg"
+        ];
+
+        function aleatorio() {
+            var i = Math.floor(Math.random() * imagenes.length);
+            document.getElementById("fotos").src = imagenes[i];
+        }
+    </script>
+     
+</head>
+
+<body>
+
+    <a href="../index.html">Volver</a><br><br>
+
+    <div class="imagen-container">
+        <img id="fotos" src="IMG-20240130-WA0038.jpg" alt="Imagen">
+    </div><br>
+
+    <div class="boton">
+        <a href="javascript:void(0);" onclick="aleatorio()">Mostrar imagen aleatoria</a>
+    </div><br>
+
+</body>
+
+</html>

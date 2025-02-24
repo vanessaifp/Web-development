@@ -1,0 +1,63 @@
+@import url(../../css/header_footer.css);
+@import url(../../css/reset.css);
+@import url(../../css/body.css);
+@import url(../../css/nav.css);
+
+#dni, #texto {
+    text-align: center;
+    font-size: 20px;
+    margin-top: 10px;
+    font-family: 'Courier New', Courier, monospace;  
+    font-weight: bolder;
+    width: 100%;
+    height: auto;
+    background-color: gainsboro;
+    
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px black;
+}
+
+.boton {
+    display: inline-block;
+    margin: 5px auto;
+    padding: 5px 5px;
+    
+}
+
+p a:hover {
+    color: red;
+}
+
+/* .uni1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.uni1 div {
+    display: flex;
+    flex-direction: column;
+}
+
+.uni1 a {
+    color: blue;
+    padding: 5px;
+    align-self: center;
+    border-radius: 5px;
+    transition: 0.6s;
+}
+
+.uni1 a:hover {
+    
+    color: white;
+    background-color: cadetblue;
+    text-align: center;
+}
+
+.uni1 p {
+    text-align: center;
+} */
+
+
+

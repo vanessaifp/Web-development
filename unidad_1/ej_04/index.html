@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EJERCICIO 4</title>
+    <link rel="stylesheet" href="style.css" type="text/css" media="screen" charset="utf-8" />
+    <script type="text/javascript">
+        var numero;
+        do {
+            numero = parseInt(prompt("Introduce un numero del 1 a 9: "));
+        }
+        while (numero > 10);
+
+        document.write("<table border=1");
+        for (i = 0; i < 11; i++) {
+            document.write("<tr><td>", numero, "</td>", "<td> * ", i, "</td>", "<td>", numero * i, "</td></tr>");
+
+        }
+        document.write("</table>");
+
+
+
+    </script>
+</head>
+
+<body><a href="../index.html">Volver</a><br><br>
+</body>
+
+</html>
