@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+
+  <link rel='stylesheet' href='css/style.css' type='text/css' media='screen' charset='utf-8' />
+  <title> Limitar número de caracteres en textarea</title>
+  <style type="text/css">
+    body {
+      font-family: arial, helvetica;
+    }
+  </style>
+  <script type="text/javascript">
+    function limita(elEvento, maximoCaracteres) {
+      //limito a 100 caracteres
+      var caracteres = document.getElementById("texto");
+      //obtengo el numero de caracteres del campo textarea
+      var num_caracteres = caracteres.value.length;
+      //y lo comparo con el maximo de caracteres permitido
+      if (num_caracteres >= maximoCaracteres) {
+        return false;
+      }
+      //añado una mejora para que solo se puedan meter letras
+      //creo un array de letras
+      var caracteres = "abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ";
+      //leo el caracter
+      var evento = elEvento || window.event;
+      var codigoCaracter = evento.charCode || evento.keyCode
+      var caracter = String.fromCharCode(codigoCaracter);
+      // si el caracter tecleado esta en el array caracteres será distinto a -1 y retornara true
+      return caracteres.indexOf(caracter) != -1;
+
+      //
+    }
+
+    function actualizaInfo(maximoCaracteres) {
+      //Insertar código aqui
+      var caracteres = document.getElementById("texto");
+      var num_caracteres = caracteres.value.length;
+      var quedan = maximoCaracteres - num_caracteres;
+      info.innerHTML = "Maximo 100 caracteres, te quedan: " + quedan;
+    }
+  </script>
+</head>
+
+<body>
+  <a href="../index.html">Volver</a>
+  <div id="info">Máximo 100 caracteres</div>
+  <textarea id="texto" onkeypress="return limita(event, 100);" onkeyup="actualizaInfo(100)" rows="6"
+    cols="30"></textarea>
+</body>
+
+</html>

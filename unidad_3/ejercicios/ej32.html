@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+
+  <link rel='stylesheet' href='css/style.css' type='text/css' media='screen' charset='utf-8' />
+    <title>Funcion de validación</title>
+    <script type="text/javascript">
+      function validarEntero(valor) {
+        //inserta aqui el codigo.
+        edad = document.getElementById("edad").value;
+        if (isNaN(edad) || edad == "") {
+          alert("Edad tiene que ser numero");
+          return false;
+        }
+        if (edad < 18) {
+          alert("El usuario tiene que ser mayor de 18 años");
+          return false;
+        }
+        return true;
+      }
+
+      function validarNombre() {
+        nombre = document.getElementById("nombre").value;
+        if (nombre == null || nombre.length == "") {
+            return false
+        } else {
+            return true;
+        }
+      }
+
+      function validarSeleccion() {
+        var lista = document.getElementById("interes")
+        var indiceSeleccionado = lista.selectedIndex;
+        if (indiceSeleccionado == 0) {
+          return false;
+        } else {
+          return true;
+        }
+
+      }
+
+
+      function validacion() {
+        edadOk = validarEntero();
+        nombreOk = validarNombre();
+        seleccionOk = validarSeleccion();
+
+        if (edadOk) {
+          alert("La edad es correcta");
+        } else {
+          alert("La edad es incorrecta");
+          document.fvalida.edad.focus();
+        }
+
+        if (nombreOk) {
+            alert ("Hay un nombre correcto")
+        } else {
+            alert ("Debes introducir un nombre")
+            document.fvalida.nombre.focus();
+        }
+
+        if (seleccionOk) {
+          alert ("Has seleccionado un valor")
+        } else {
+          alert ("Debes seleccionar un valor")
+          document.fvalida.interes.focus();
+        }
+
+        if (!edadOk || !nombreOk || !seleccionOk) {
+          alert ("Revisa los campos erroneos")
+          
+        } else {
+          alert ("Todo correcto, se envía")
+          document.fvalida.submit();
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <a href="../index.html">Volver</a>
+    <form name="fvalida" action="">
+      <table>
+        <tr>
+          <td>Nombre:</td>
+          <td>
+            <input type="text" name="nombre" id="nombre" size="30" maxlength="100" />
+          </td>
+        </tr>
+        <tr>
+          <td>Edad:</td>
+          <td>
+            <input type="text" name="edad" id="edad" size="3" maxlength="2" />
+          </td>
+        </tr>
+        <tr>
+          <td>Interés:</td>
+          <td>
+            <select name="interes" id="interes">
+              <option value="Elegir">Elegir</option>
+
+              <option value="Comercial">Contacto comercial</option>
+
+              <option value="Clientes">Atención al cliente</option>
+
+              <option value="Proveedores">Contacto de proveedores</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <input type="button" value="Enviar" onclick="validacion()" />
+          </td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+
+  <link rel='stylesheet' href='css/style.css' type='text/css' media='screen' charset='utf-8' />
+    <title>UV3_UD3 - Validacion de Fecha</title>
+    <script type="text/javascript">
+      function validacion() {
+        var Fecha = document.fValidaFecha.fecha.value; // Crea un string
+        var RealFecha = new Date(); // Para sacar la fecha de hoy
+        // Cadena Año. Del string fecha, coge desde el ultimo guion, hasta la longitud de la fecha
+        var Ano = new String(
+          Fecha.substring(Fecha.lastIndexOf("-") + 1, Fecha.length)
+        );
+        // Cadena Mes. Coge desde el primer guion al ultimo
+        var Mes = new String(
+          Fecha.substring(Fecha.indexOf("-") + 1, Fecha.lastIndexOf("-"))
+        );
+        // Cadena Día
+        var Dia = new String(Fecha.substring(0, Fecha.indexOf("-")));
+        // Valido el año
+        if (isNaN(Ano) || Ano.length < 4 || parseFloat(Ano) < 1900) {
+          alert("Año inválido");
+          return false;
+        }
+        // Valido el Mes
+        if (isNaN(Mes) || parseFloat(Mes) < 1 || parseFloat(Mes) > 12) {
+          alert("Mes inválido");
+          return false;
+        }
+        // Valido el Dia
+        if (isNaN(Dia) || parseInt(Dia, 10) < 1 || parseInt(Dia, 10) > 31) {
+          alert("Día inválido");
+          return false;
+        }
+        if (Mes == 4 || Mes == 6 || Mes == 9 || Mes == 11 || Mes == 2) {
+          if ((Mes == 2 && Dia > 28) || Dia > 30) {
+            alert("Día inválido");
+            return false;
+          }
+        }
+        //para que envie los datos, quitar las 2 lineas siguientes
+        alert("Fecha correcta.");
+        return false;
+        document.fValidaFecha.submit();
+      }
+    </script>
+  </head>
+  <body>
+    <a href="../index.html">Volver</a>
+    <p>
+      Solución Ejercicio Voluntario Página 2 de 2 Ejemplo de validación de
+      fechas con formato <b>dd-mm-aaaa</b> mayor de 1900
+    </p>
+    <form
+      name="fValidaFecha"
+      action=""
+      onsubmit="return Validar(this.fecha.value)"
+    >
+      <small>Fecha:</small>
+      <br />
+      <input type="text" name="fecha" size="15" />
+      <input type="button" value="Validar Fecha" onclick="validacion()" />
+    </form>
+  </body>
+</html>

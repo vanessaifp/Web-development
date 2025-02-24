@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+
+  <link rel='stylesheet' href='css/style.css' type='text/css' media='screen' charset='utf-8' />
+    <title> Validacion de Fecha</title>
+    <script type="text/javascript">
+      function validacion() {
+        //Escribe tu código aqui
+        var fecha = document.getElementById("fecha").value;
+        alert(fecha);
+        var esGuion1 = fecha.charAt(2);
+        var esGuion2 = fecha.charAt(5);
+        alert(esGuion1);
+        alert(esGuion2);
+        if (esGuion1 != "-" || esGuion2 != "-") {
+          alert("La fecha no tiene el formato correcto");
+          var formatoOK = false;
+          document.fValidaFecha.fecha.focus();
+          return false;
+        } else {
+          alert("Parece que la fecha es correcta, comprobamos mes, dia y año");
+          var formatoOK = true;
+        }
+        //Si el formato es ok, se evalua el dia, mes y año
+        if (formatoOK) {
+          arrayFecha = fecha.split("-");
+          var dia = arrayFecha[0];
+          dia = parseInt(dia);
+          var mes = arrayFecha[1];
+          mes = parseInt(mes);
+          var anyo = arrayFecha[2];
+          anyo = parseInt(anyo);
+          alert(dia);
+          alert(mes);
+          alert(anyo);
+          if (anyo < 1900) {
+            var anyoCorrecto = false;
+            alert ("El año tiene que ser mayor a 1900")
+          } else {
+            var anyoCorrecto = true;
+          }
+          //compruebo si año es bisiesto (divisible por 4, y no es ni 1900 ni 2000)
+          var bisiesto = anyo % 4;
+          if (bisiesto == 0) {
+            if (anyo.charAt(2) == "0" && anyo.charAt(3) == "0") {
+              var anyoBisiesto = false;
+            } else {
+              var anyoBisiesto = true;
+            }
+          }
+          //en funcion del mes, y si es bisiesto, establezco máximo de dias del mes
+          var dMax;
+          var mesCorrecto = true;
+          switch (mes) {
+            case 1:
+              dMax = "31";
+              break;
+            case 3:
+              dMax = "31";
+              break;
+            case 5:
+              dMax = "31";
+              break;
+            case 7:
+              dMax = "31";
+              break;
+            case 8:
+              dMax = "31";
+              break;
+            case 10:
+              dMax = "31";
+              break;
+            case 1:
+              dMax = "31";
+              break;
+            case 4:
+              dMax = "30";
+              break;
+            case 6:
+              dMax = "30";
+              break;
+            case 9:
+              dMax = "30";
+              break;
+            case 11:
+              dMax = "30";
+              break;
+            case 2:
+              if (anyoBisiesto) {
+                dMax = "28";
+              } else {
+                dMax = "29";
+              }
+              break;
+            default:
+              alert("mes incorrecto");
+              mesCorrecto = false;
+              break;
+          }
+          alert(dMax);
+//Compruebo si el dia introducido es correcto
+          if (dia <= dMax && dia >= "0") {
+            alert("el dia es correcto");
+            var diaCorrecto = true;
+          } else {
+            alert("el dia es incorrecto");
+            var diaCorrecto = false;
+          }
+        }
+        //Si todo es correcto se envia
+         if (formatoOK && anyoCorrecto && mesCorrecto && diaCorrecto) {
+          document.fValidaFecha.submit();
+         }
+      }
+    </script>
+  </head>
+  <body>
+    <a href="../index.html">Volver</a>
+    <p>
+      Ejemplo de validación de fechas con formato <b>dd-mm-aaaa</b> mayor de
+      1900
+    </p>
+    <form
+      name="fValidaFecha"
+      id="fValidaFecha"
+      action=""
+      onsubmit="return Validar(this.fecha.value)"
+    >
+      <small>Fecha:</small>
+      <br />
+      <input type="text" name="fecha" id="fecha" size="15" />
+      <input type="button" value="Validar Fecha" onclick="validacion()" />
+    </form>
+  </body>
+</html>
