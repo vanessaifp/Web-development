@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selección obligatorio</title>
+    <link rel='stylesheet' href='css/style.css' type='text/css' media='screen' charset='utf-8' />
+    <script type="text/javascript" src="js/script_lista.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>AVANZADO EN JAVASCRIPT</h1>
+    </header>
+    <nav>
+        <a href="index.html">Volver a unidad 3</a>
+    </nav>
+    <main>
+        <h3>Selección obligatoria</h3>
+        <p>Si no se selecciona algo, da un error</p>
+        <form action="" id="formulario" onsubmit="return validacion()">
+            SELECCIONA UNA OPCION VALIDA
+            <select name="opciones" id="opciones">
+                <option value="0">Elige fruta</option>
+                <option value="1">Manzanas</option>
+                <option value="2">Piña</option>
+                <option value="3">Melon</option>
+            </select>
+            <input type="submit" value="Enviar" class="boton">
+
+        </form>
+        <div id="texto">
+
+
+        </div>
+    </main>
+    <footer>
+        <p>Todos los derechos reservados</p>
+        <p>Vanessa Figueroa - 2025</p>
+    </footer>
+
+</body>
+
+</html>

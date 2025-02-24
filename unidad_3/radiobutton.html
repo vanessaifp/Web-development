@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Texto y Textarea</title>
+    <link rel='stylesheet' href='css/style.css' type='text/css' media='screen' charset='utf-8' />
+    <script type="text/javascript" src="js/script_radiobutton.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>AVANZADO EN JAVASCRIPT</h1>
+    </header>
+    <nav>
+        <a href="index.html">Volver a unidad 3</a>
+    </nav>
+    <main>
+        <h3>Obtener los valores de Radio Button</h3>
+        <p>Selecciona un valor y pulsa enviar</p>
+        <form action="" id="formulario">
+            <label>¿Iras a la playa este verano?</label><br>
+            <input type="radio" value="si" name="pregunta" id="preg_si"> SI<br>
+            <input type="radio" value="no" name="pregunta" id="preg_no"> NO<br>
+            <input type="radio" value="nsnc" name="pregunta" id="preg_nsNc"> N/A<br>
+            <input type="button" value="Enviar" onclick="respuesta()" class="boton">
+        </form>
+        <div id="texto">
+
+
+        </div>
+    </main>
+    <footer>
+        <p>Todos los derechos reservados</p>
+        <p>Vanessa Figueroa - 2025</p>
+    </footer>
+
+</body>
+
+</html>

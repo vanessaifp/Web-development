@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validación de Fecha</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/script_fecha.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Validación de Fecha</h1>
+    </header>
+    <nav>
+        <a href="index.html">Volver a unidad 3</a>
+    </nav>
+    <main>
+        <h3>Introduce una fecha (DD-MM-AAAA)</h3>
+        <form id="formulario">
+            <label for="dia">Día:</label>
+            <input type="number" id="dia" name="dia" min="1" max="31" required>
+            <br>
+            <label for="mes">Mes:</label>
+            <input type="number" id="mes" name="mes" min="1" max="12" required>
+            <br>
+            <label for="anyo">Año:</label>
+            <input type="number" id="anyo" name="anyo" min="1900" max="2100" required>
+            <br>
+            <input type="submit" value="Enviar" class="boton">
+        </form>
+        <div id="mensaje"></div>
+    </main>
+    <footer>
+        <p>Todos los derechos reservados</p>
+        <p>Vanessa Figueroa - 2025</p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+    <title>Avanzando en JAVASCRIPT</title>
+    <link rel='stylesheet' href='css/style.css' type='text/css' media='screen' charset='utf-8' />
+    <script>
+        // Función para redirigir a la opción seleccionada
+        function redirigir(selectElement) {
+            var url = selectElement.value;
+            if (url) {
+                window.location.href = url;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <h1>AVANZADO EN JAVASCRIPT</h1>
+    </header>
+    <nav>
+        <a href="../index.html">Volver a página inicial</a>
+    </nav>
+    <section>
+        <article>
+            <h3>Ejercicios y ejemplos</h3>
+            <p>Se muestran a continuación toda la serie de ejemplos y ejercicios realizados durante el estudio de esta unidad. Los ejercicios se presentan tal y como se hicieron, mientras que el resto se les ha dado estilo con CSS</p>
+            <p>Pinchad en los enlaces que se muestran a continuación para ir comprobándolo.</p>
+
+            <div class="uni1">
+                <div>
+                    <p><B>FORMULARIOS</B></p>
+                    <select onchange="redirigir(this)">
+                        <option value="">Selecciona una opción</option>
+                        <option value="textotextarea.html">Text y textarea</option>
+                        <option value="radiobutton.html">Radio Button</option>
+                        <option value="checkbox.html">Check Box</option>
+                        <option value="select.html">Select</option>
+                        <option value="focus.html">Focus</option>
+                        <option value="restringir.html">Restringir carácteres</option>
+                        <option value="limitacar.html">Limitar carácteres</option>
+                    </select>
+                </div>
+                <div>
+                    <p><B>VALIDACIONES</B></p>
+                    <select onchange="redirigir(this)">
+                        <option value="">Selecciona una opción</option>
+                        <option value="campotextoobligatorio.html">Texto obligatorio</option>
+                        <option value="numeroobligatorio.html">Número obligatorio</option>
+                        <option value="lista.html">Select obligatorio</option>
+                        <option value="email.html">Verificar email</option>
+                        <option value="fecha.html">Verificar fecha</option>
+                        <option value="dni1.html">Verificar DNI </option>
+                        <option value="numerotel.html">Verificar nº teléfono</option>
+                        <option value="checkbox2.html">Verificar CheckBox</option>
+                        <option value="radiobutton2.html">Verificar Radio Button</option>
+                    </select>
+                </div>
+                <div>
+                    <p><B>EJERCICIOS</B></p>
+                    <select onchange="redirigir(this)">
+                        <option value="">Selecciona una opción</option>
+                        <option value="ejercicios/ej31.html">Ejercicio 1</option>
+                        <option value="ejercicios/ej32.html">Ejercicio 2</option>
+                        <option value="ejercicios/ej33_1.html">Ejercicio 3-1</option>
+                        <option value="ejercicios/ej33_2.html">Ejercicio 3-2</option>
+                        <option value="ejercicios/ej34_1.html">Ejercicio 4-1</option>
+                        <option value="ejercicios/ej34_2.html">Ejercicio 4-2</option>
+                    </select>
+                </div>
+            </div>
+
+        </article>
+    </section>
+    <footer>
+        <p>Todos los derechos reservados</p>
+        <p>Vanessa Figueroa - 2025</p>
+    </footer>
+</body>
+
+</html>
