@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    background-color: #fef3f3; 
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.portada {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1 {
+    font-size: 32px;
+    color: #d16b86; 
+    font-weight: 600;
+}
+
+header {
+    background: white;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+nav a {
+    padding: 10px 15px;
+    font-weight: bold;
+    color: #d16b86;
+    transition: 0.3s ease-in-out;
+}
+
+nav a:hover {
+    color: #f79aad; 
+    text-decoration: underline;
+}
+
+a {
+    text-decoration: none;
+}
+
+main {
+    margin-top: 30px;
+    padding: 20px;
+}
+
+.fila1 {
+    display: flex;
+    justify-content: center; /* Centra las cajas horizontalmente */
+    gap: 30px; /* Aumenta la separación entre las cajas */
+    row-gap: 40px;
+    flex-wrap: wrap; /* Permite que las cajas se ajusten si la pantalla es más pequeña */
+}
+
+.fila1 section {
+    width: 200px; /* Ajusta el ancho de las cajas */
+    height: 200px; /* Ajusta el alto de las cajas */
+    display: flex;
+    align-items: center; /* Centra el texto verticalmente */
+    justify-content: center; /* Centra el texto horizontalmente */
+    text-align: center;
+    border-radius: 15px; /* Esquinas redondeadas */
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    background-color: #f8c8dc; /* Rosado pálido */
+    color: #333; /* Color del texto */
+    font-weight: bold;
+}
+
+
+.fila1 section:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+h2 {
+    color: #d16b86;
+    transition: 0.3s;
+}
+
+h2:hover {
+    transform: scale(1.1);
+    color: #f79aad;
+}
+
+@media (max-width: 900px) {
+    .portada {
+        width: 95%;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .fila1 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .fila1 section {
+        width: 90%;
+        height: 100px;
+        line-height: 100px;
+        margin-bottom: 15px;
+    }
+
+    h2:hover {
+        letter-spacing: 2px;
+    }
+}
