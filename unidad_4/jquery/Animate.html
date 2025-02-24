@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Animate</title>
+  <link rel='stylesheet' href='css/styles.css' type='text/css' media='screen' charset='utf-8' />
+
+  <script type="text/javascript" src="js/jquery-3.7.1.min.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $("#btn_estira").click(function() {
+        $(".caja").animate ({width: "300px"})
+      })
+      $("#btn_encoge").click(function() {
+        $(".caja").animate ({width: "100px"})
+      })
+      $("#btn_alarga").click(function() {
+        $(".caja").animate ({height: "300px"})
+      })
+      $("#btn_acorta").click(function() {
+        $(".caja").animate ({height: "100px"})
+      })
+ 
+ 
+
+      $("#btn_codigo").click(function () {
+        $("img").toggle("1000");
+      })
+    })
+ </script> 
+  <style>
+    .caja {
+      width: 100px;
+      height: 100px;
+      background-color: rgb(184, 132, 182);
+      border: 1px solid black
+    }
+  </style>
+
+
+</head>
+
+<body>
+  <header>
+    <h1>JQUERY</h1>
+  </header>
+  <nav>
+          <a href="../index.html">Volver a unidad 4</a>
+  </nav>  
+
+  <div class="principal">
+    <h2>Animate</h2>
+    <input type="button" id="btn_estira" value="Estira" class="boton_ul">
+    <input type="button" id="btn_encoge" value="Encoge" class="boton_ul">
+    <input type="button" id="btn_alarga" value="Alarga" class="boton_ul">
+    <input type="button" id="btn_acorta" value="Acorta" class="boton_ul">
+
+    <div class="caja">
+
+    </div>
+   
+
+  </div>  <footer>
+    <p>Todos los derechos reservados</p>
+    <p>Vanessa Figueroa - 2025</p>
+</footer>
+</body>
+
+</html>

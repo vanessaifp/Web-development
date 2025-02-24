@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 1 </title>
+  <link rel="stylesheet" href="estilos.css">
+  <script type="text/javascript">
+
+    function IntroducirCliente() {
+      factura.cliente.nombre = prompt("Indica nombre: ");
+      factura.cliente.direccion = prompt("Indica dirección: ");
+      factura.informacion.baseImponible = 0;
+      factura.elementos[0].precio = prompt("Precio curso 1: ");
+      factura.elementos[1].precio = prompt("Precio curso 2: ");
+      factura.elementos[2].precio = prompt("Precio curso 3: ");
+
+    }
+    // Estructura básica del objeto Factura
+    var factura = {
+      empresa: {
+        nombre: "SEAS",
+        direccion: "Isla de Lanzarote",
+        telefono: "976 700 660",
+        nif: "xxxxxxxxxx",
+      },
+      cliente: {
+        nombre: "JOSE PEREZ",
+        direccion: "EBRO Nº 5",
+        telefono: "123456789",
+        nif: "25252525H",
+      },
+      elementos: [
+        { descripcion: "curso1", cantidad: 1, precio: 250 },
+        { descripcion: "curso2", cantidad: 1, precio: 250 },
+        { descripcion: "curso3", cantidad: 1, precio: 100 },
+      ],
+      informacion: {
+        baseImponible: 0,
+        iva: 0.21,
+        total: 0,
+        formaPago: "contado",
+      },
+    };
+    // Métodos de cálculo del total y de visualización del total
+    factura.calculaTotal = function () {
+
+      for (var i = 0; i < this.elementos.length; i++) {
+        this.informacion.baseImponible +=
+          this.elementos[i].cantidad * this.elementos[i].precio;
+      }
+      this.informacion.total =
+        this.informacion.baseImponible +
+        this.informacion.baseImponible * this.informacion.iva;
+    };
+    factura.muestraTotal = function () {
+      this.calculaTotal();
+      //alert("TOTAL = " + this.informacion.total + " euros");
+      document.getElementById("facturas").innerHTML = "Para cliente: " + this.cliente.nombre + "<br>" + "Direccion " + this.cliente.direccion + "<br>";
+      document.getElementById("facturas").innerHTML += "TOTAL = " + this.informacion.total + " euros";
+    }
+
+    function mostrarFactura() {
+      factura.muestraTotal();
+    }
+
+  </script>
+</head>
+
+<body>
+  <a href="../../index.html">Volver a unidad 4 </a>
+  <h1>FACTURAS</h1>
+  <h2>Desglose de facturación</h2>
+  <p>Pulse Introducur Cliente, para añadir el cliente a facturar</p>
+  <p>Después, pulse Mostrar Factura, para obtener la factura</p>
+
+  <div id="facturas"></div>
+  <br>
+  <button id="boton1" onclick="IntroducirCliente()">Introducir cliente</button>
+  <br>
+  <button id="boton2" onclick="mostrarFactura()">Mostrar factura</button>
+</body>
+
+</html>

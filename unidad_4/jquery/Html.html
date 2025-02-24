@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Metodo HTML</title>
+  <script type="text/javascript" src="js/jquery-3.7.1.min.js">
+  </script>
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $("#boton1").click(function () {
+        $("#formulario").html(
+          "<form>INGRESE NOMBRE: <input type='text' id='nombre'><br>INGRESA CLAVE: <input type='text' id='clave'><br><input type='submit' value='confirmar'></form>"
+        );
+      });
+      $("#boton2").click(function () {
+        var x = $("#formulario").html();
+        alert(x);
+      });
+
+
+      $("#btn_codigo").click(function () {
+        $("img").toggle("1000");
+      })
+    })
+
+  </script>
+
+  <link rel='stylesheet' href='css/styles.css' type='text/css' media='screen' charset='utf-8' />
+</head>
+
+<body>
+  <header>
+    <h1>JQUERY</h1>
+  </header>
+  <nav>
+    <a href="../index.html">Volver a unidad 4</a>
+  </nav>
+  <div class="principal">
+    <h2>Método html() y html(valor)</h2>
+    <p>Pulsa en los botones para ver como crear un formulario con html().</p>
+    <input type="button" id="boton1" class="boton_ul" value="Mostrar formulario" />
+    <input type="button" id="boton2" class="boton_ul" value="Mostrar elementos html del formulario" />
+    <br />
+    <div id="formulario"></div>
+
+
+  </div>
+  <footer>
+    <p>Todos los derechos reservados</p>
+    <p>Vanessa Figueroa - 2025</p>
+  </footer>
+</body>
+
+</html>

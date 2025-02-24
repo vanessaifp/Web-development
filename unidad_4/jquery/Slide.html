@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel='stylesheet' href='css/styles.css' type='text/css' media='screen' charset='utf-8' />
+  <title>Evento jQUER slide</title>
+  <script type="text/javascript" src="js/jquery-3.7.1.min.js">
+  </script>
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $("#boton1").click(function () {
+        $("#p1").slideUp()
+      })
+      $("#boton2").click(function () {
+        $("#p1").slideDown()
+      })
+      $("#boton3").click(function () {
+        $("#p1").slideToggle()
+      })
+      $("#btn_codigo").click(function () {
+        $("img").toggle("1000");
+      })
+    })
+
+  </script>
+
+</head>
+
+<body>
+  <header>
+    <h1>JQUERY</h1>
+  </header>
+  <nav>
+    <a href="../index.html">Volver a unidad 4</a>
+  </nav>
+  <div class="principal">
+    <h2>Método Slide</h2>
+    <p>Pulsa en los botones para ver los efectos sobre los parrafos.</p>
+    <input type="button" id="boton1" class="boton_ul" value="Deslizar slideUp()" />
+    <input type="button" id="boton2" class="boton_ul" value="Deslizar slideDown()" />
+    <input type="button" id="boton3" class="boton_ul" value="Deslizar slideToggle()" />
+
+    <br>
+
+
+    <p id="p1">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate molestiae odio eveniet, vel debitis nihil
+      beatae fugiat aliquid praesentium quis? Enim magnam vel dolorem, quisquam aspernatur sapiente molestias hic earum
+      harum? Commodi sit, placeat reiciendis officia sequi iste repellendus deleniti molestias ea expedita consequatur
+      ut ipsa asperiores obcaecati similique ullam libero odio vero, in eius eveniet maxime. Quisquam repellendus
+      aspernatur a doloremque molestiae, ut labore nobis fugiat incidunt? Cum laboriosam officiis voluptate molestiae
+      ducimus saepe quaerat doloribus architecto fuga rem maxime soluta illum, cumque esse quod dolorum quibusdam
+      debitis voluptatibus odio, tempora adipisci eius consequatur. Doloribus veritatis fugiat perspiciatis minima
+      similique itaque deleniti quasi omnis delectus ratione reiciendis odio in, provident quidem accusamus iste aperiam
+      molestias? Maxime, saepe esse. Perferendis culpa vitae eligendi officiis facilis? Eaque suscipit in sapiente
+      pariatur quasi id sequi, maxime sit quod nemo exercitationem dolore officia obcaecati magnam, eius adipisci!
+      Soluta repellendus magnam odit at fuga voluptatem ipsam aut fugiat maiores iusto pariatur quae quas harum
+      temporibus eligendi, modi minus? Quaerat consequuntur ratione, reiciendis deserunt ex tempore dignissimos et sunt
+      odio rerum fugiat nesciunt labore sequi cupiditate provident modi possimus incidunt quo voluptatibus maxime, sit
+      quod alias sint eveniet. Veritatis mollitia debitis optio nulla amet laudantium.
+
+    </p>
+
+
+  </div>
+  <footer>
+    <p>Todos los derechos reservados</p>
+    <p>Vanessa Figueroa - 2025</p>
+  </footer>
+</body>
+
+</html>

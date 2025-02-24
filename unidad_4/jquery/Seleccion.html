@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Evento jQUERY</title>
+  <script type="text/javascript" src="js/jquery-3.7.1.min.js">
+  </script>
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $("#boton_clase").click(function () {
+        $(".parrafos").css("color", "red")
+      })
+      $("#boton_id").click(function () {
+        $("#p1").css("color", "blue")
+      })
+      $("#boton_tag").click(function () {
+        $("p").css("color", "brown")
+      })
+      $("#boton_reset").click(function () {
+        $("p").css("color", "black")
+      })
+
+
+
+      $("#btn_codigo").click(function () {
+        $("img").toggle("1000");
+      })
+    });  </script>
+
+
+
+
+  <link rel='stylesheet' href='css/styles.css' type='text/css' media='screen' charset='utf-8' />
+</head>
+
+<body>
+  <header>
+    <h1>JQUERY U4</h1>
+  </header>
+  <nav>
+          <a href="../index.html">Volver a unidad 4</a>
+  </nav>  
+  <div class="principal">
+    <h2>Selección de elementos por id, class, tag</h2>
+    <h3>Pulsa en los botones para cambiar el estilo de los parrafos segun su id, clase, tag, ...</h3>
+    <input type="button" value="Por clase (P2-P3-P4)" class="boton_ul" id="boton_clase">
+    <input type="button" value="Por id (P1)" class="boton_ul" id="boton_id">
+    <input type="button" value="Por tag (TODOS)" class="boton_ul" id="boton_tag">
+    <input type="button" value="Reset" class="boton_ul" id="boton_reset">
+
+    <p id="p1">P1: En un lugar de la Mancha, de cuyo nombre no quiero acordarme</p>
+    <p class="parrafos">P2: no ha mucho tiempo que vivía un hidalgo de los de lanza en astillero,</p>
+    <p class="parrafos">P3: adarga antigua, rocín flaco y galgo corredor.</p>
+    <p class="parrafos">P4: Una olla de algo más vaca que carnero, salpicón las más noches</p>
+
+
+  </div>
+  <footer>
+    <p>Todos los derechos reservados</p>
+    <p>Vanessa Figueroa - 2025</p>
+</footer>
+</body>
+
+</html>

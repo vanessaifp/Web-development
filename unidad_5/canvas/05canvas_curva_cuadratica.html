@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <script type="text/javascript">
+        function retornarLienzo(x) {
+          var canvas = document.getElementById(x);
+          if (canvas.getContext) {
+            var lienzo = canvas.getContext("2d");   
+            return lienzo;
+          } else
+            return false;
+        }
+        
+        var fila=0;
+        function dibujar() {
+          var lienzo=retornarLienzo("lienzo1");
+          if (lienzo) {
+            lienzo.clearRect(0,0,300,300);
+            lienzo.strokeStyle="rgb(255,0,0)";
+            lienzo.beginPath();
+            lienzo.moveTo(0,150);
+            lienzo.quadraticCurveTo(150,fila,300,150);
+            lienzo.stroke();    
+            fila++;
+            if (fila>300)
+              fila=0;
+          }
+        }
+        
+        function iniciar() {
+          setInterval(dibujar,10);
+        }
+        
+        </script>
+
+ 
+    
+    <title>CANVAS</title>
+</head>
+<body  onLoad="iniciar()">
+    <header>
+      <h1>HTML5 Y CSS3</h1>
+    </header>
+    <nav>
+      <a href="index_canvas.html">Volver a CANVAS</a>
+
+    </nav> 
+    <section>
+        <article>
+            <h4>Curva Cuadratica</h4>
+            <canvas id="lienzo1" width="300" height="300" style="background-color: rgb(255, 255, 255);">
+                Su navegador no permite utilizar Canvas
+            </canvas>
+        </article>
+    </section>
+    
+    <footer>
+        <p>Todos los derechos reservados</p>
+        <p>Vanessa Figueroa - 2025</p>
+    </footer>
+</html>

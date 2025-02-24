@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Evento jQUER mousemove</title>
+  <script type="text/javascript" src="js/jquery-3.7.1.min.js">
+  </script>
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $("#boton1").click(function () {
+        $("#p1").hide("slow")
+      })
+      $("#boton2").click(function () {
+        $("#p1").show()
+      })
+      $("#boton3").click(function () {
+        $("#p2").fadeOut(2000)
+      })
+      $("#boton4").click(function () {
+        $("#p2").fadeIn(2000)
+      })
+      $("#boton5").click(function () {
+        $("#p3").fadeTo("slow", 0.5)
+      })
+      $("#boton6").click(function () {
+        $("#p3").fadeTo("slow", 1)
+      })
+      $("#boton7").click(function () {
+        $("#p4").toggle("slow")
+      })
+
+
+
+      $("#btn_codigo").click(function () {
+        $("img").toggle("1000");
+      })
+    })
+
+  </script>
+
+  <link rel='stylesheet' href='css/styles.css' type='text/css' media='screen' charset='utf-8' />
+</head>
+
+<body>
+  <header>
+    <h1>JQUERY</h1>
+  </header>
+  <nav>
+    <a href="../index.html">Volver a unidad 4</a>
+  </nav>
+  <div class="principal">
+    <h2>Método fade, hide, show, toggle</h2>
+    <p>Pulsa en los botones para ver los efectos sobre los parrafos.</p>
+    <input type="button" id="boton1" class="boton_ul" value="Ocultar recuadro (hide)" />
+    <input type="button" id="boton2" class="boton_ul" value="Mostrar recuadro (show)" />
+    <input type="button" id="boton3" class="boton_ul" value="Ocultar lentamente (fadeOut-slow)" />
+    <input type="button" id="boton4" class="boton_ul" value="Mostrar lentamente (fadeIn-slow)" />
+    <input type="button" id="boton5" class="boton_ul" value="Da transparencia (fadeTo)" />
+    <input type="button" id="boton6" class="boton_ul" value="Devuelve opacidad (fadeTo)" />
+    <input type="button" id="boton7" class="boton_ul" value="Muestra y oculta (toggle)" />
+
+    <p id="p1">
+      P1: Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit
+      cum maxime et commodi eligendi voluptate, vitae id voluptatem placeat.
+
+    </p>
+    <p id="p2">
+      P2: Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit
+      cum maxime et commodi eligendi voluptate, vitae id voluptatem placeat.
+
+    </p>
+    <p id="p3">
+      P3: Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit
+      cum maxime et commodi eligendi voluptate, vitae id voluptatem placeat.
+
+    </p>
+    <p id="p4">
+      P4 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit
+      cum maxime et commodi eligendi voluptate, vitae id voluptatem placeat.
+
+    </p>
+
+  </div>
+  <footer>
+    <p>Todos los derechos reservados</p>
+    <p>Vanessa Figueroa - 2025</p>
+  </footer>
+</body>
+
+</html>

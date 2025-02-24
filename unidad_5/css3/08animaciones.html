@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+    <title>Propiedades Avanzadas CSS3</title>
+    <link rel='stylesheet' href='css/style.css' type='text/css' media='screen' charset='utf-8' />
+    <script type="text/JavaScript">
+        window.onload = function () {
+           
+            cuadro = document.getElementById("recuadro2")
+        }
+
+        function parar() {
+            
+            cuadro.style.animationPlayState = "paused";
+           
+        }
+
+        function seguir() {
+          
+            cuadro.style.animationPlayState = "running";
+           
+        }
+
+        function velocidad(num) {
+
+            valor = num + "s"; 
+            cuadro.style.animationDuration = valor;
+            cuadro.style.MozAnimationDuration = valor; 
+            cuadro.style.WebkitAnimationDuration = valor;
+}    </script>
+
+</head>
+
+<body>
+    <header>
+        <h1>HTML5 Y CSS3</h1>
+    </header>
+    <nav>
+        <a href="index_css3.html">Volver a CSS3</a>
+    </nav>
+    <section>
+        <article class="inicio">
+            <h4>Animaciones con CSS3</h4>
+
+            <div id="recuadro1">
+                <!-- <h3>Título</h3> -->
+                <p>Nuestra primera animación</p>
+            </div>
+
+            <div class="fondos fondos2 anim2">
+
+            </div>
+
+            <h4>Animaciones con JavaScript</h4>
+            <div id="recuadro2">
+                <!-- <h3>Título</h3> -->
+                <p>Animado con JavaScript</p>
+            </div>
+            <div class="mando">
+                <input type="button" name="stop" value="stop" class="boton" onclick="parar()" />
+                <input type="button" name="play" value="play" class="boton" onclick="seguir()" />
+                <br><b>Elige la velocidad:</b><br>
+                <select name="vel" onchange="velocidad(this.value)">
+                    <option value="4" selected="selected">Normal</option>
+                    <option value="10">Muy lento</option>
+                    <option value="8">Lento</option>
+                    <option value="2">Rápido</option>
+                    <option value="1">Muy Rápido</option>
+                </select>
+            </div>
+
+
+
+        </article>
+    </section>
+    <footer>
+        <p>Todos los derechos reservados</p>
+        <p>Vanessa Figueroa - 2025</p>
+    </footer>
+</body>
+
+</html>

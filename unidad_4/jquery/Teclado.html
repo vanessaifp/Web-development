@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Evento jQUERY teclado</title>
+  <link rel='stylesheet' href='css/styles.css' type='text/css' media='screen' charset='utf-8' />
+
+  <script type="text/javascript" src="js/jquery-3.7.1.min.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      var contador1 = 0;
+      $('#inputField').keydown(function () { 
+        contador1 += 1;
+        $('#keydownOutput').text('Tecla pulsada:' + contador1 + ' veces'); 
+      });
+      var contador2 = 0; 
+       $('#inputField').keypress(function () { 
+        
+        contador2 += 1;
+        $('#keypressOutput').text('Tecla pulsada y liberada:' + contador2 + ' veces'); 
+      }); 
+      $('#inputField').keyup(function () { 
+        var inputValue = $(this).val(); 
+        $('#keyupOutput').text('Tecla liberada. Texto actual: ' + inputValue); 
+      });
+ 
+
+      $("#btn_codigo").click(function () {
+        $("img").toggle("1000");
+      })
+    })
+  </script> 
+
+
+</head>
+
+<body>
+  <header>
+    <header>
+      <h1>JQUERY</h1>
+    </header>
+    <nav>
+            <a href="../index.html">Volver a unidad 4</a>
+    </nav>  
+
+  <div class="principal">
+    <h2>Eventos de teclado</h2>
+    <form action="#" metod="post">
+      
+      <input type="text" id="inputField" placeholder="Escribe algo">
+    </form>
+    <p id="keydownOutput"></p>
+    <p id="keypressOutput"></p>
+    <p id="keyupOutput"></p>
+
+
+  </div>  <footer>
+    <p>Todos los derechos reservados</p>
+    <p>Vanessa Figueroa - 2025</p>
+</footer>
+</body>
+
+</html>

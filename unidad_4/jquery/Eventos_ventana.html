@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Evento jQUERY</title>
+    <script type="text/javascript" src="js/jquery-3.7.1.min.js">
+    </script>
+
+<script type="text/javascript">  
+  $(document).ready(function() {
+    $("#boton_clase").click(function() {
+      $(".parrafos").css("color", "red")
+    })
+    $("#boton_id").click(function() {
+      $("#p1").css("color", "blue")
+    })
+    $("#boton_tag").click(function() {
+      $("p").css("color", "brown")
+    })
+    $("#boton_reset").click(function() {
+      $("p").css("color", "black")
+    })
+ 
+
+
+  $("#btn_codigo").click(function(){
+    $("img").toggle("1000");
+  })
+});  </script>   
+ 
+
+
+
+    <link rel='stylesheet' href='css/styles.css' type='text/css' media='screen' charset='utf-8'/>
+  </head>
+  <body>
+    <header>
+      <h1>JQUERY</h1>
+    </header>
+    <nav>
+            <a href="../index.html">Volver a unidad 4</a>
+    </nav>  
+        <div class="principal">
+          <h2>Selección de elementos por id, class, tag</h2>
+          <p>Pulsa en los botones para cambiar el estilo de los parrafos segun su id, clase, tag, ...</p>
+          <input type="button" value="Por clase (P2-P3-P4)" class="boton_ul"  id="boton_clase">
+          <input type="button" value="Por id (P1)" class="boton_ul"  id="boton_id">
+          <input type="button" value="Por tag (TODOS)" class="boton_ul"  id="boton_tag">
+          <input type="button" value="Reset" class="boton_ul"  id="boton_reset">
+
+          <p  id="p1">P1: Con 100 cañones por banda viento en popa a toda vela</p>
+          <p class="parrafos">P2: No corta el mar sino vuela un velero bergantil</p>
+          <p class="parrafos">P3: Brajel el pirata le llaman por su bravura el temido</p>
+          <p class="parrafos">P4: En todo mar conocido del uno al otro confin</p>
+       
+          
+       
+          
+        <input type="button" id="btn_codigo"   value="Pulsa para mostrar/ocultar el código que lo realiza"></input><br>
+
+</div>
+<footer>
+  <p>Todos los derechos reservados</p>
+  <p>Vanessa Figueroa - 2025</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Manejador de eventos</title>
+  <link rel='stylesheet' href='css/styles.css' type='text/css' media='screen' charset='utf-8' />
+
+  <script type="text/javascript" src="js/jquery-3.7.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-color/2.1.2/jquery.color.min.js"
+    integrity="sha512-VjRpiWhUqdNa9bwBV7LnlG8CwsCVPenFyOQTSRTOGHw/tjtME96zthh0Vv9Itf3i8w4CkUrdYaS6+dAt1m1YXQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script type="text/javascript">
+    // $(function () {
+    //   handleClick = function () {
+    //     $('#output').text('Botón clickeado');
+    //     $('#output').css({color: "red",
+    //                     fontWeight: "bold"
+    //                     });
+    //     $('#output').fadeTo(1000,0.6);
+    //   };
+
+    //   $('#myButton').on('click', handleClick);
+
+    //   $('#removeHandler').on('click', function () {
+    //     $('#myButton').off('click', handleClick);
+    //     $('#output').text('Manejador de evento eliminado');
+    //     $('#output').css('color', 'black');
+    //   });
+
+    //   $('#addHandler').on('click', function () {
+    //     $('#myButton').on('click', handleClick);
+    //     $('#output').text('Manejador de evento habilitado');
+    //   });
+    // });
+
+    $(function () {
+      handleClick = function () {
+        $('#output').text('Botón clickeado');
+        $('#output').css({
+          color: "red",
+          fontWeight: "bold"
+        });
+        $('#output').fadeTo(1000, 0.6);
+      };
+      $(document).on('click', '#myButton', handleClick);
+      $('#removeHandler').on('click', function () {
+        $('#myButton').off('click');
+        $('#output').text('Manejador de evento eliminado');
+        $('#output').css('color', 'black');
+        $('#output').fadeTo(100, 1.0);
+      });
+      $('#addHandler').on('click', function () {
+        $(document).on('click', '#myButton', handleClick);
+        $('#output').text('Manejador de evento habilitado');
+      });
+    });
+
+
+    $("#btn_codigo").click(function () {
+      $("img").toggle("1000");
+    })
+  </script>
+
+
+
+
+
+</head>
+
+<body>
+  <header>
+    <h1>JQUERY</h1>
+  </header>
+  <nav>
+    <a href="../index.html">Volver a unidad 4</a>
+  </nav>
+
+  <div class="principal">
+    <h2>Manejador de eventos on - off</h2>
+    <button id="myButton" class="boton_ul">Haz clic en mí</button>
+    <button id="removeHandler" class="boton_ul">Eliminar Manejador de Evento</button>
+    <button id="addHandler" class="boton_ul">Habilitar Manejador de Evento</button>
+    <p id="output"></p>
+
+
+
+  </div>
+  <footer>
+    <p>Todos los derechos reservados</p>
+    <p>Vanessa Figueroa - 2025</p>
+  </footer>
+</body>
+
+</html>

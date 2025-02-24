@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 3</title>
+  <script type="text/javascript">
+    // Funcion que recorta la longitud de una cadena
+    String.prototype.truncar = function (longitud) {
+      longitud = longitud || 30;
+      if (this.length > longitud) {
+        return this.substring(0, longitud);
+      } else {
+        return this;
+      }
+    };
+    var cadena = "hola mundo";
+    alert("La cadena: '" + cadena + "' va a ser truncada con prototype.truncar a 15 caracteres")
+    alert(cadena.truncar(15));
+    // Funcion que recorta la longitud de una cadena y añade
+    // un indicador de cadena recortada
+    String.prototype.recortar = function (longitud, indicador) {
+      longitud = longitud || 10;
+      indicador = indicador || "...";
+      if (this.length > longitud) {
+        return this.substring(0, longitud - indicador.length) + indicador;
+      } else {
+        return this;
+      }
+    };
+    var cadena =
+      "En un lugar de la Mancha, de cuyo nombre no quiero acordarme, no hace mucho";
+    cadena +=
+      " tiempo que vivía un hidalgo de los de lanza en astillero, adarga antigua, rocín flaco y galgo corredor.";
+    alert("La cadena inicial es: '" + cadena + "'" + " y va a ser recortada con prototype.recortar a 50 caracteres")
+    alert(cadena.recortar(50, "... (sigue)"));
+    alert(cadena.recortar(50));
+  </script>
+</head>
+
+<body>
+  <a href="../../index.html">Volver a unidad 4</a>
+</body>
+
+</html>

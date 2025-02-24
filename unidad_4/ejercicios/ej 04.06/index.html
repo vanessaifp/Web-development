@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 6 </title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h2 {
+      color: #e91e63;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .box {
+      background: #f8bbd0;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin-top: 20px;
+      text-align: left;
+    }
+
+    #contenidos,
+    #cabeceras,
+    #estados,
+    #codigo {
+      white-space: pre-wrap;
+      background: #fff;
+      padding: 15px;
+      border: 2px solid #ccc;
+      min-height: 100px;
+    }
+
+    input,
+    button {
+      padding: 10px;
+      font-size: 1em;
+      border: none;
+      border-radius: 5px;
+      margin: 10px 0;
+    }
+
+    input {
+      width: 60%;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      background: #e91e63;
+      color: white;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #c2185b;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Visor de Contenidos HTTP</h1>
+  <form onsubmit="event.preventDefault(); cargaContenido();">
+    <input type="text" id="recurso" placeholder="Ingrese la URL" />
+    <button type="submit">Mostrar Contenidos</button>
+  </form>
+
+  <div class="container">
+    <div class="box" style="width: 70%;">
+      <h2>Contenidos del archivo:</h2>
+      <div id="contenidos"></div>
+      <h2>Cabeceras HTTP:</h2>
+      <div id="cabeceras"></div>
+    </div>
+    <div class="box" style="width: 25%;">
+      <h2>Estados de la petición:</h2>
+      <div id="estados"></div>
+      <h2>Código de estado:</h2>
+      <div id="codigo"></div>
+    </div>
+  </div>
+
+  <script>
+    async function cargaContenido() {
+      let recurso = document.getElementById('recurso').value;
+      if (!recurso) {
+        alert("Por favor, ingrese una URL válida.");
+        return;
+      }
+      let inicio = performance.now();
+
+      try {
+        let respuesta = await fetch(recurso, { cache: 'no-cache' });
+        let tiempo = (performance.now() - inicio).toFixed(2);
+        document.getElementById('estados').innerHTML = `[${tiempo} ms] Completado`;
+        document.getElementById('codigo').innerHTML = `${respuesta.status} - ${respuesta.statusText}`;
+        document.getElementById('cabeceras').innerText = [...respuesta.headers].map(h => h.join(': ')).join('\n');
+        document.getElementById('contenidos').innerText = await respuesta.text();
+      } catch (error) {
+        document.getElementById('estados').innerHTML = "Error en la petición";
+        document.getElementById('codigo').innerHTML = "-";
+        document.getElementById('cabeceras').innerText = "-";
+        document.getElementById('contenidos').innerText = "No se pudo cargar el contenido.";
+      }
+    }
+  </script>
+  <a href="../../index.html">Volver a unidad 4</a>
+</body>
+
+</html>

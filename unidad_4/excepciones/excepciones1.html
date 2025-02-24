@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Excepciones</title>
+  <script type="text/javascript">
+    try {
+      if (typeof a == "undefined" || isNan(a)) {
+        throw new Error("A no es un numero")
+      }
+      var resultado = 5 / a;
+      alert(typeof a)
+    } catch (excepcion) {
+      alert(excepcion)
+    } finally {
+      alert("se ejecuta")
+    };
+
+
+  </script>
+</head>
+
+<body>
+  <a href="../index.html">Volver a unidad 4</a><br><br>
+  <footer>
+    <p>Todos los derechos reservados</p>
+    <p>Vanessa Figueroa - 2025</p>
+  </footer>
+</body>
+
+</html>

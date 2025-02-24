@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Evento jQUERY dblclick</title>
+  <link rel='stylesheet' href='css/styles.css' type='text/css' media='screen' charset='utf-8' />
+
+  <script type="text/javascript" src="js/jquery-3.7.1.min.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $(".text").css("color", "rgba(128, 128, 128, 0.5)")
+      $(".text").focus(function () {
+        $(this).css({
+          "background-color": "red",
+          "color": "black"
+        })
+      })
+      $(".text").blur(function () {
+        $(this).css({
+          "background-color": "",
+          "color": "rgba(128, 128, 128, 0.5)"
+        })
+      })
+
+
+      $("#btn_codigo").click(function () {
+        $("img").toggle("1000");
+      })
+    })
+  </script>
+
+
+</head>
+
+<body>
+  <header>
+    <h1>JQUERY</h1>
+  </header>
+  <nav>
+    <a href="../index.html">Volver a unidad 4</a>
+  </nav>
+
+  <div class="principal">
+    <h2>Evento focus y blur</h2>
+    <form action="#" metod="post">
+      <p>Pincha en los inputs y sal de ellos</p>
+      <input type="text" id="text1" class="text" value="Escribiendo..." size="20"><br>
+      <input type="text" id="text2" class="text" value="Escribiendo..." size="20"><br>
+
+
+    </form>
+
+
+
+
+  </div>
+  <footer>
+    <p>Todos los derechos reservados</p>
+    <p>Vanessa Figueroa - 2025</p>
+  </footer>
+</body>
+
+</html>

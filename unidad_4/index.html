@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAVASCRIPT</title>
+    <link rel='stylesheet' href='css/style.css' type='text/css' media='screen' charset='utf-8' />
+    <script>
+        // Función para redirigir a la opción seleccionada
+        function redirigir(selectElement) {
+            var url = selectElement.value;
+            if (url) {
+                window.location.href = url;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <h1>JQUERY & AJAX </h1>
+    </header>
+    <nav>
+        <a href="../index.html">Volver a página inicial</a>
+    </nav>
+    <section>
+        <article>
+            <h3>Ejercicios y ejemplos</h3>
+            <p>A continuación les muestro algunos ejemplos y ejercicios realizados durante el estudio de esta unidad.</p>
+            <p>Pinchad en los enlaces que se muestran a continuación para ir comprobándolo.</p>
+            <div class="uni1">
+                <div>
+                    <p><B>AJAX</B></p>
+                    <select onchange="redirigir(this)">
+                        <option value="">Selecciona una opción</option>
+                        <option value="clases/prototype1.html">Factura</option>
+                        <option value="reflexion/index.html">Reflexión</option>
+                        <option value="excepciones/excepciones1.html">Excepciones</option>
+                    </select>
+                </div>
+                <div>
+                    <p><B>JQUERY</B></p>
+                    <select onchange="redirigir(this)">
+                        <option value="">Selecciona una opción</option>
+                        <option value="jquery/Eventos_raton.html">Eventos de Ratón</option>
+                        <option value="jquery/Teclado.html">Eventos de teclado</option>
+                        <option value="jquery/Seleccion.html">Selección de elementos</option>
+                        <option value="jquery/EvenOdd.html">Método even/odd</option>
+                        <option value="jquery/Html.html">Método html</option>
+                        <option value="jquery/Slide.html">Efecto slide</option>
+                        <option value="jquery/Fade.html">Efecto fade</option>
+                        <option value="jquery/Each.html">Método each</option>
+                    </select>
+                </div>
+                <div>
+                    <p><B>JQUERY</B></p>
+                    <select onchange="redirigir(this)">
+                        <option value="">Selecciona una opción</option>
+                        <option value="jquery/ManipularNodosDOM.html">Manipular nodos</option>
+                        <option value="jquery/MouseMove.html">Mouse move</option>
+                        <option value="jquery/Focus.html">Método focus</option>
+                        <option value="jquery/Animate.html">Método animate</option>
+                        <option value="jquery/Manejador.html">Manejador de eventos</option>
+                        <option value="jquery/JQ_UI.html">JQUERY UI</option>
+                    </select>
+                </div>
+                <div>
+                    <p><B>EJERCICIOS</B></p>
+                    <select onchange="redirigir(this)">
+                        <option value="">Selecciona una opción</option>
+                        <option value="ejercicios/ej 04.01/index.html">Ejercicio 1</option>
+                        <option value="ejercicios/ej 04.02/index.html">Ejercicio 2</option>
+                        <option value="ejercicios/ej 04.03/index.html">Ejercicio 3</option>
+                        <option value="ejercicios/ej 04.04/index.html">Ejercicio 4</option>
+                        <option value="ejercicios/ej 04.05/index.html">Ejercicio 5</option>
+                        <option value="ejercicios/ej 04.06/index.html">Ejercicio 6</option>
+                    </select>
+                </div>
+            </div>
+        </article>
+    </section>
+    <footer>
+        <p>Todos los derechos reservados</p>
+        <p>Vanessa Figueroa - 2025</p>
+    </footer>
+</body>
+
+</html>

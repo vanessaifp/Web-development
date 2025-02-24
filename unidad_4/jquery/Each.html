@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Evento jQUER mousemove</title>
+    <script type="text/javascript" src="js/jquery-3.7.1.min.js">
+    </script>
+
+<script type="text/javascript">  
+  $(document).ready(function () {
+        var x = $("#parrafos p");
+        x.each(resaltaParrafos);
+        function resaltaParrafos() {
+          var x = $(this);
+          if (x.text().length > 800)  {
+            x.css("color", "brown");
+          } else
+          if (x.text().length > 200)  {
+            x.css("color", "blue");
+          } else {
+            x.css("color", "red");
+          }
+        }
+        $("#btn_codigo").click(function(){
+                $("img").toggle("1000");
+            })
+      });
+</script>
+
+    <link rel='stylesheet' href='css/styles.css' type='text/css' media='screen' charset='utf-8'/>
+  </head>
+  <body>
+    <header>
+      <h1>JQUERY</h1>
+    </header>
+    <nav>
+            <a href="../index.html">Volver a unidad 4</a>
+    </nav>  
+        <div class="principal">
+        <h2>Método each</h2>
+        <p>En función de la longitud del texto de cada párrafo, establece un estilo de color de dicho párrafo al cargar la página</p>
+        <div id="parrafos">
+            <p>PARRAFO 1: Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo hic sed aut praesentium tempora, unde dignissimos reprehenderit eius inventore reiciendis, esse, ipsum id doloribus nesciunt velit possimus perspiciatis laborum commodi dicta cumque cum odit iure expedita sequi! Accusamus minus sunt minima pariatur qui ratione possimus a tempora numquam alias quas, corporis porro reprehenderit, vero asperiores eius ex consequuntur placeat enim! Qui voluptatibus, explicabo nobis quia corrupti sapiente! Nemo officia quasi magnam omnis incidunt sint recusandae, cumque modi quisquam perspiciatis, eligendi facilis eum! Earum, velit, ipsam, quibusdam fuga ea ex optio enim laboriosam quaerat illum error nulla. Debitis incidunt quidem officia excepturi eum mollitia iusto, assumenda voluptatum quibusdam inventore exercitationem? Beatae eius perspiciatis, expedita mollitia ex totam, atque a consequuntur fugit architecto rerum corporis! Beatae praesentium, sed saepe a rerum cupiditate repudiandae impedit debitis, facilis tempora adipisci veniam consectetur sint vel libero atque, ducimus sit in quo odit accusamus quos dolore expedita! Sequi, id cupiditate. Neque nobis soluta, inventore ad, vero error nisi vitae ipsa est similique debitis perspiciatis, repudiandae necessitatibus iste maiores at facilis animi dolores repellat velit delectus! Cumque est sint voluptatibus labore, blanditiis alias laborum accusantium explicabo illo delectus recusandae quam ipsa in quibusdam, non, quis fuga. Ipsam?</p>
+            <p>
+              PARRAFO 2: Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, in
+              harum. Perspiciatis molestiae quam aliquid nesciunt at, nulla sit
+              laboriosam officiis sapiente fuga placeat dolorum. Voluptates optio,
+              repudiandae voluptatum, eaque officiis, expedita tenetur suscipit dolore
+              ab eius beatae unde ut adipisci laudantium exercitationem commodi
+              reiciendis necessitatibus? Minus voluptatibus sequi debitis!
+            </p>
+            <p>
+              PARRAFO 3: Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, ut
+              molestiae
+            </p>
+            
+          </div>
+</div>
+<footer>
+  <p>Todos los derechos reservados</p>
+  <p>Vanessa Figueroa - 2025</p>
+</footer>
+</body>
+</html>

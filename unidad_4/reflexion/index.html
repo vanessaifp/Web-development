@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>reflexion</title>
+  <script type="text/javascript">
+    //comprobar instanceof
+    var elObjeto = [];
+    if (elObjeto instanceof Array) {
+      alert("Objeto 1 es un array");
+    } else if (elObjeto instanceof Object) {
+      alert("Objeto 1 es un objeto");
+    }
+
+    var elObjeto2 = {
+      a: 5,
+      b: 7
+
+    };
+
+    if (elObjeto2 instanceof Object) {
+      alert("Objeto 2 es un objeto");
+    } else if (elObjeto2 instanceof Array) {
+      alert("Objeto 2 es un array");
+    }
+    //comprobar typeof
+    var a = 5;
+    alert("La variable a es: " + typeof a);
+
+    var b = "casa";
+    alert("La variable b es: " + typeof b);
+
+    var c = true;
+    alert("La variable c es: " + typeof c);
+  </script>
+</head>
+
+<body> <a href="../index.html">Volver a unidad 4</a><br><br></body>
+
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Evento jQUER mousemove</title>
+    <script type="text/javascript" src="js/jquery-3.7.1.min.js">
+    </script>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+      $("#boton1").click(function () {
+          $("ul").empty();
+      }) 
+      $("#boton2").click(function () {
+          $("ul").html("<li>PRIMER ELEMENTO</li><li>SEGUNDO ELEMENTO</li><li>TERCER ELEMENTO</li><li>CUARTO ELEMENTO</li>")
+      })
+      $("#boton3").click(function () {
+          $("ul").append("<li>Nuevo elemento al final</li>");
+      }) 
+      $("#boton4").click(function () {
+          $("ul").prepend("<li>Nuevo elemento al principio</li>");
+      }) 
+      $("#boton5").click(function() {
+          var cantidad = $("li").length
+          var posicion = $("li").eq(cantidad-1)
+          posicion.remove();
+      })
+      $("#boton6").click(function() {
+          var posicion = $("li").eq(0)
+          posicion.remove();
+      })
+      $("#boton7").click(function() {
+          var posicion = $("ul li:lt(2)")
+          posicion.remove();
+      })
+      $("#boton8").click(function() {
+          var posicion = $("ul li").slice(-2)
+          posicion.remove();
+      })
+      $("#btn_codigo").click(function(){
+                $("img").toggle("1000");
+    })
+  })    
+
+
+
+</script>
+
+    <link rel='stylesheet' href='css/styles.css' type='text/css' media='screen' charset='utf-8'/>
+  </head>
+  <body>
+    <header>
+      <h1>JQUERY</h1>
+    </header>
+    <nav>
+            <a href="../index.html">Volver a unidad 4</a>
+    </nav>  
+        <div class="principal">
+        <h2>Método para manipular nodos del DOM</h2>
+        <p>Pulsa en los botones para añadir/eliminar elementos de la lista</p>
+        <ul class="lista_manipular">
+          <li>PRIMER ELEMENTO</li>
+          <li>SEGUNDO ELEMENTO</li>
+          <li>TERCER ELEMENTO</li>
+          <li>CUARTO ELEMENTO</li>
+      </ul>
+      <input type="button" id="boton1" class="boton_ul" value="Eliminar lista completa">
+      <input type="button" id="boton2"  class="boton_ul" value="Restaurar lista completa">
+      <input type="button" id="boton3" class="boton_ul"  value="Añadir un elemento al final de la lista">
+      <input type="button" id="boton4" class="boton_ul"  value="Añadir un elemento al principio de la lista">
+      <input type="button" id="boton5" class="boton_ul"  value="Eliminar ultimo elemento">
+      <input type="button" id="boton6" class="boton_ul"  value="Eliminar primer elemento">
+      <input type="button" id="boton7" class="boton_ul"  value="Eliminar primer y segundo elemento">
+      <input type="button" id="boton8" class="boton_ul"  value="Eliminar los dos ultimos"><br>
+      <input type="button" id="btn_codigo"   value="Pulsa para mostrar/ocultar el código que lo realiza"></input><br>
+
+
+</div>
+<footer>
+  <p>Todos los derechos reservados</p>
+  <p>Vanessa Figueroa - 2025</p>
+</footer>
+</body>
+</html>

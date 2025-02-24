@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factura AJAX</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+       body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f4f9;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 800px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+header, footer {
+    width: 100%;
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #d16b86;
+    color: white;
+}
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Factura Generada</h1>
+    </header>
+
+    <nav>
+        <a href="../index.html">Volver a unidad 4</a>
+    </nav>
+
+    <main class="contenedor">
+        <h2>Detalles de la Factura</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Descripción</th>
+                    <th>Cantidad</th>
+                    <th>Precio Unitario (€)</th>
+                    <th>Subtotal (€)</th>
+                </tr>
+            </thead>
+            <tbody id="tabla-factura"></tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3"><strong>Base Imponible (€)</strong></td>
+                    <td id="base-imponible"></td>
+                </tr>
+                <tr>
+                    <td colspan="3"><strong>IVA (16%)</strong></td>
+                    <td id="iva"></td>
+                </tr>
+                <tr>
+                    <td colspan="3"><strong>Total (€)</strong></td>
+                    <td id="total"></td>
+                </tr>
+            </tfoot>
+        </table>
+    </main>
+
+    <footer>
+        <p>Todos los derechos reservados</p>
+        <p>Vanessa Figueroa - 2025</p>
+    </footer>
+
+    <script>
+        // Clase Cliente
+        class Cliente {
+            constructor(nombre, direccion, telefono, nif) {
+                this.nombre = nombre;
+                this.direccion = direccion;
+                this.telefono = telefono;
+                this.nif = nif;
+            }
+        }
+
+        // Clase Elemento
+        class Elemento {
+            constructor(descripcion, cantidad, precio) {
+                this.descripcion = descripcion;
+                this.cantidad = parseInt(cantidad);
+                this.precio = parseFloat(precio);
+            }
+        }
+
+        // Clase Factura
+        class Factura {
+            constructor(cliente, elementos) {
+                this.cliente = cliente;
+                this.elementos = elementos;
+                this.informacion = {
+                    baseImponible: this.calculaBaseImponible(),
+                    iva: 16,
+                    total: 0
+                };
+                this.informacion.total = this.calculaTotal();
+            }
+
+            calculaBaseImponible() {
+                return this.elementos.reduce((sum, elem) => sum + (elem.cantidad * elem.precio), 0);
+            }
+
+            calculaTotal() {
+                return this.informacion.baseImponible * (1 + this.informacion.iva / 100);
+            }
+
+            mostrarFacturaEnTabla() {
+                const tablaBody = document.getElementById("tabla-factura");
+                tablaBody.innerHTML = ""; // Limpia la tabla antes de agregar datos
+
+                this.elementos.forEach(elem => {
+                    let fila = `<tr>
+                        <td>${elem.descripcion}</td>
+                        <td>${elem.cantidad}</td>
+                        <td>${elem.precio.toFixed(2)}</td>
+                        <td>${(elem.cantidad * elem.precio).toFixed(2)}</td>
+                    </tr>`;
+                    tablaBody.innerHTML += fila;
+                });
+
+                document.getElementById("base-imponible").innerText = this.informacion.baseImponible.toFixed(2);
+                document.getElementById("iva").innerText = (this.informacion.baseImponible * 0.16).toFixed(2);
+                document.getElementById("total").innerText = this.informacion.total.toFixed(2);
+            }
+        }
+
+        // Crear Cliente y Elementos
+        const cliente = new Cliente("Pepe Pérez", "Calle Falsa 123", "600600600", "12345678X");
+        const elementos = [
+            new Elemento("Artículo 1", 1, 5),
+            new Elemento("Artículo 2", 2, 12),
+            new Elemento("Artículo 3", 3, 42)
+        ];
+
+        // Crear la Factura y mostrarla en la tabla
+        const factura = new Factura(cliente, elementos);
+        factura.mostrarFacturaEnTabla();
+    </script>
+
+</body>
+
+</html>

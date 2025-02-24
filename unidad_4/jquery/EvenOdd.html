@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Evento jQUERY</title>
+    <script type="text/javascript" src="js/jquery-3.7.1.min.js">
+    </script>
+
+<script type="text/javascript">  
+  $(document).ready(function() {
+    $("#boton_impares").click(function(){
+      $("table tr:even").css("background-color", "blue")
+  })
+  $("#boton_pares").click(function(){
+      $("table tr:odd").css("background-color", "brown")
+  })
+  $("#boton_reset").click(function(){
+      $("table tr").css("background-color", "")
+  })
+
+
+
+
+     
+  $("#btn_codigo").click(function(){
+    $("img").toggle("1000");
+  })
+});  
+ 
+</script>  
+
+
+    <link rel='stylesheet' href='css/styles.css' type='text/css' media='screen' charset='utf-8'/>
+  </head>
+  <body>
+    <header>
+      <h1>JQUERY</h1>
+    </header>
+    <nav>
+            <a href="../index.html">Volver a unidad 4</a>
+    </nav>  
+        <div class="principal">
+          <h2>Método odd y even</h2>
+          <p>Pulsa en los botones para cambiar el estilo de las filas impares o pares</p>
+          <input type="button" value="Impares" class="boton_ul"  id="boton_impares">
+          <input type="button" value="Pares" class="boton_ul"  id="boton_pares">
+          <input type="button" value="Reset" class="boton_ul"  id="boton_reset">
+          
+       <br><br>
+       <table>
+        <tr>
+          <td>11111</td>
+          <td>11111</td>
+          <td>11111</td>
+          <td>11111</td>
+        </tr>
+        <tr>
+          <td>22222</td>
+          <td>22222</td>
+          <td>22222</td>
+          <td>22222</td>
+        </tr>
+        <tr>
+          <td>33333</td>
+          <td>33333</td>
+          <td>33333</td>
+          <td>33333</td>
+        </tr>
+        <tr>
+          <td>44444</td>
+          <td>44444</td>
+          <td>44444</td>
+          <td>44444</td>
+        </tr>
+        <tr>
+          <td>55555</td>
+          <td>55555</td>
+          <td>55555</td>
+          <td>55555</td>
+        </tr>
+        <tr>
+          <td>66666</td>
+          <td>66666</td>
+          <td>66666</td>
+          <td>66666</td>
+        </tr>
+      </table>
+          
+
+
+
+</div>
+<footer>
+  <p>Todos los derechos reservados</p>
+  <p>Vanessa Figueroa - 2025</p>
+</footer>
+</body>
+</html>

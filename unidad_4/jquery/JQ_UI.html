@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Animate</title>
+  <link rel='stylesheet' href='css/styles.css' type='text/css' media='screen' charset='utf-8' />
+  <link rel="stylesheet" href="js/jquery-ui-1.13.2/jquery-ui.min.css" type='text/css' media='screen' charset='utf-8'>
+  <script type="text/javascript" src="js/jquery-3.7.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-color/2.1.2/jquery.color.min.js"
+    integrity="sha512-VjRpiWhUqdNa9bwBV7LnlG8CwsCVPenFyOQTSRTOGHw/tjtME96zthh0Vv9Itf3i8w4CkUrdYaS6+dAt1m1YXQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script type="text/javascript" src="js/jquery-ui-1.13.2/jquery-ui.min.js"></script>
+  <style>
+    #mover1, #mover2, #mover3 {
+      width: 100px;
+      height: 100px;
+      background-color: beige;
+      padding: 5px;
+    }
+  </style>
+
+</head>
+
+<body>
+  <header>
+    <h1>JQUERY</h1>
+  </header>
+  <nav>
+          <a href="../index.html">volver a unidad 4</a>
+  </nav>  
+
+  <div class="principal">
+    <h2>JQUERY UI</h2>
+    <h2>Calendario</h2>
+    <label for="calendario">Selecione fecha</label>
+    <input type="text" name="" id="calendario">
+    <input type="button" id="muestraFecha" value="Muestra la fecha" onclick="muestraFecha()">
+  </div>
+
+  <div class="principal">
+    <h2>Acordeón</h2>
+    <div id="acordeon">
+      <h3>Parrafo 1</h3>
+      <div>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit accusamus nam, ipsam, unde eveniet consequatur
+          autem aperiam consectetur dolorum cum distinctio asperiores enim voluptate totam voluptatum, sunt nemo
+          explicabo facere adipisci quas optio officiis. Eos ullam dolor enim doloremque id impedit quam at pariatur.
+          Aliquid officiis modi rerum repellat autem!</p>
+      </div>
+      <h3>Parrafo 2</h3>
+      <div>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit accusamus nam, ipsam, unde eveniet consequatur
+          autem aperiam consectetur dolorum cum distinctio asperiores enim voluptate totam voluptatum, sunt nemo
+          explicabo facere adipisci quas optio officiis. Eos ullam dolor enim doloremque id impedit quam at pariatur.
+          Aliquid officiis modi rerum repellat autem!</p>
+      </div>
+      <h3>Parrafo 3</h3>
+      <div>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit accusamus nam, ipsam, unde eveniet consequatur
+          autem aperiam consectetur dolorum cum distinctio asperiores enim voluptate totam voluptatum, sunt nemo
+          explicabo facere adipisci quas optio officiis. Eos ullam dolor enim doloremque id impedit quam at pariatur.
+          Aliquid officiis modi rerum repellat autem!</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="principal">
+    <h2>Draggable</h2>
+    <div id="mover1" class="ui-widget-content">
+      Mueveme en cualquier dirección
+    </div>
+    <div id="mover2" class="ui-widget-content">
+      Mueveme solo en horizontal
+    </div>
+    <div id="mover3" class="ui-widget-content">
+      Mueveme solo en vertical y el cursor cambia
+    </div>
+
+  </div>
+
+
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      //Creo un acordeon  
+      $("#acordeon").accordion({
+        collapsible: true
+      });
+      //Dragable
+      $("#mover1").draggable();
+      $("#mover2").draggable({axis: "x"});
+      $("#mover3").draggable({axis: "y", cursor: "move"});
+     
+      //Creo un calendario
+      $("#calendario").datepicker({
+        changeMonth: true,
+        changeYear: true
+      });
+      $("#calendario").datepicker("option", "dateFormat", "dd/mm/yy");
+      $("#calendario").datepicker("option", "showAnim", "slide");
+
+    });
+    function muestraFecha() {
+      var e = $("#calendario").val();
+      alert(e)
+    }
+
+
+  </script>
+
+
+
+<footer>
+  <p>Todos los derechos reservados</p>
+  <p>Vanessa Figueroa - 2025</p>
+</footer>
+
+</body>
+
+</html>

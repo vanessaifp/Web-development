@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 2</title>
+
+    <link
+      rel="stylesheet"
+      href="style.css"
+      type="text/css"
+      media="screen"
+      charset="utf-8"
+    />
+    <script type="text/javascript">
+      // Funcion que añade elementos al final del array
+      Array.prototype.anadir = function (elemento) {
+        //calculo longitud array
+        var ultimo = this.length;
+        //añado en la ultima posicion el elemento pasado
+        this[ultimo] = elemento;
+      };
+      //creo array
+      var array1 = [0, 1, 2];
+      alert(
+        "El array1 es ahora: " +
+          array1 +
+          " y tiene una longitud de: " +
+          array1.length
+      );
+      //solicito que elemento a añadir al array
+      do {
+      nuevoElemento = prompt("Que elemento quieres añadir para array1");
+    } while (nuevoElemento=="");
+      array1.anadir(nuevoElemento);
+      alert(
+        "Con el nuevo elemento, el array es ahora: " +
+          array1 +
+          " y tiene una longitud de: " +
+          array1.length
+      );
+
+      //////////////////////////
+      //añado a Array una funcion que me comprueba si el elemento es repetido
+      Array.prototype.contiene = function (elemento) {
+        //alert(this.length);
+        elemento = parseInt(elemento);
+       //alert(elemento);
+        for (var i = 0; i < this.length; i++) {
+          //alert(this[i]);
+          var repetido = false;
+          if (this[i] == elemento) {
+            alert("elemento repetido");
+            repetido = true;
+            break;
+          }
+        }
+        return repetido;
+      };
+      //funcion que añade un nuevo elemento al array solo si no es repetido
+      array2 = [0, 1, 2, 3, 4, 5];
+      do {
+      nuevoElemento2 = prompt("Que elemento quieres añadir para array2");
+    } while (nuevoElemento2=="");
+      if (array2.contiene(nuevoElemento2)) {
+        alert("No añado el elemento pq está repetido, se queda como " + array2)
+      } else {
+        alert (array2 + " Asi era el array2")
+        array2.anadir(nuevoElemento2)
+        alert (array2 + " Asi es el array2")
+
+      }
+
+
+    </script>
+  </head>
+  <body>
+    <a href="../../index.html">Volver a unidad 4</a>
+  </body>
+</html>

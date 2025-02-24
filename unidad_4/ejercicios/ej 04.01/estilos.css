@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    width: 80%;
+    margin: 0 auto;
+    color: #333;
+}
+
+h1 {
+    font-size: 26px;
+    color: #D84A91; /* Rosado */
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 22px;
+    color: #4A90E2; /* Azul complementario */
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+#facturas {
+    color: #D84A91; /* Rosado */
+    font-weight: bold;
+}
+
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #D84A91; /* Rosado */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #B93F7F; /* Rosado más oscuro */
+    transform: translateY(-2px); /* Levele movimiento hacia arriba */
+}
+
+button:active {
+    transform: translateY(0);
+}

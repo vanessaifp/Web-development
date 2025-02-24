@@ -1,0 +1,116 @@
+/* Estilos generales: centrado y colores */
+body {
+    width: 80%;
+    margin: 0 auto;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #ffffff; /* Fondo blanco */
+    color: #8a2be2; /* Texto principal en morado */
+}
+
+/* Título principal */
+h1 {
+    text-align: center;
+    margin: 10px 0;
+    padding: 10px;
+    color: #ff6bcb; /* Rosado principal */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Subtítulos */
+h4 {
+    text-align: center;
+    margin: 5px;
+    color: #8a2be2; /* Morado */
+}
+
+/* Párrafos */
+p {
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* Sección principal */
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 5px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #ff6bcb1a; /* Rosado muy suave */
+}
+
+/* Contenedor principal */
+.inicio {
+    width: 80%;
+    margin: 0 auto;
+    background-color: #ff6bcb; /* Fondo rosado */
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Imágenes responsivas */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 5px;
+}
+
+/* Listas */
+ul {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 300px;
+}
+
+/* Ítems de lista */
+li {
+    padding: 10px;
+    border-radius: 5px;
+    transition: 0.3s;
+    text-align: center;
+    list-style: none;
+    background-color: #87ceeb; /* Azul pastel */
+    color: #ffffff;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+/* Efecto hover en lista */
+li:hover {
+    background-color: #8a2be2; /* Morado */
+    color: white;
+}
+
+/* Enlaces */
+a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #8a2be2;
+    transition: 0.3s;
+}
+
+/* Hover en enlaces */
+a:hover {
+    color: white;
+    background-color: #ff6bcb;
+    padding: 5px;
+    border-radius: 5px;
+}

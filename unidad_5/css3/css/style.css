@@ -1,0 +1,440 @@
+@import url("../../../css/reset.css");
+@import url("../../../css/header_footer.css");
+@import url("../../../css/body.css");
+@import url("../../../css/nav.css");
+
+.bordes1 {
+    width: 400px;
+    height: 200px;
+    margin: 20px auto;
+    background-color: rgb(255, 224, 171);
+    padding: 10px;
+    box-shadow: 15px 15px 5px black, 20px 20px 10px rgb(255, 113, 248), 35px 35px 5px rgb(184, 184, 245);
+    border-radius: 10px 0 10px 0;
+
+}
+
+.bordes2 {
+    width: 400px;
+    height: 200px;
+    margin: 20px auto;
+    background-color:rgb(255, 224, 171);
+    padding: 10px;
+    box-shadow: inset 0px 0px 35px black;
+    border-radius: 0px 0 30px 0;
+}
+
+.bordes3 {
+    width: 400px;
+    height: 200px;
+    margin: 20px auto;
+    background-color: rgb(255, 224, 171);
+    padding: 10px;
+    box-shadow: 10px 10px 35px rgba(0, 0, 0, 0.4);
+    border-radius: 0px 20px 20px 0;
+}
+
+/* ul {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 30%;
+}
+
+li {
+    padding: 5px 30px;
+    border-radius: 5px;
+    transition: 1s;
+    text-align: center;
+}
+
+li:hover {
+    background-color: darkcyan;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+}   */
+
+hr {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.sombra_texto1 {
+    font-size: 40px;
+    font-weight: bolder;
+    text-align: center;
+    text-shadow: 10px 10px 5px rgb(10, 71, 94);
+    margin-bottom: 30px;
+}
+
+.sombra_texto2 {
+    font-size: 40px;
+    font-weight: bolder;
+    text-align: center;
+    text-shadow: -10px -10px 5px rgb(164, 95, 95);
+    margin-bottom: 30px;
+}
+
+.sombra_texto3 {
+    font-size: 40px;
+    font-weight: bolder;
+    text-align: center;
+    text-shadow: 5px 5px 5px yellow, 15px 15px 5px blue, 25px 25px 5px red;
+    margin-bottom: 30px;
+}
+
+.ej_transform {
+    margin-top: 10px;
+    width: 200px;
+    height: auto;
+    margin: 10px auto;
+    background-color: #ddd;
+    padding: 10px;
+    border-radius: 10px;
+    transition: 1s;
+}
+
+.rotacion1:hover {
+    transform: rotate(10deg);
+    -ms-transform: rotate(10deg);
+    -webkit-transform: rotate(10deg);
+    -o-transform: rotate(10deg);
+    -moz-transform: rotate(10deg);
+}
+
+.rotacion2:hover {
+    transform: rotate(-10deg);
+    -ms-transform: rotate(-10deg);
+    -webkit-transform: rotate(-10deg);
+    -o-transform: rotate(-10deg);
+    -moz-transform: rotate(-10deg);
+}
+
+.rotacion3:hover {
+    transform: rotate(10deg);
+    -ms-transform: rotate(10deg);
+    -webkit-transform: rotate(-10deg);
+    -o-transform: rotate(10deg);
+    -moz-transform: rotate(10deg);
+
+    transform-origin: left bottom;
+    -ms-transform-origin: left bottom;
+    -webkit-transform-origin: left bottom;
+    -o-transform-origin: left bottom;
+    -moz-transform-origin: left bottom;
+}
+
+.escalado1:hover {
+    transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+
+}
+
+.escalado2:hover {
+    transform: scale(1.2, 1);
+    -ms-transform: scale(1.2, 1);
+    -webkit-transform: scale(1.2, 1);
+    -o-transform: scale(1.2, 1);
+    -moz-transform: scale(1.2, 1);
+
+}
+
+.escalado3:hover {
+    transform: scale(-1.2, 1);
+    -ms-transform: scale(-1.2, 1);
+    -webkit-transform: scale(-1.2, 1);
+    -o-transform: scale(-1.2, 1);
+    -moz-transform: scale(-1.2, 1);
+
+}
+
+.escalado4:hover {
+    transform: scale(1.2, -1);
+    -ms-transform: scale(1.2, -1);
+    -webkit-transform: scale(1.2, -1);
+    -o-transform: scale(1.2, -1);
+    -moz-transform: scale(1.2, -1);
+
+}
+
+.trasladado1:hover {
+    transform: translate(100px, 0px);
+    -ms-transform: translate(100px, 0px);
+    -webkit-transform: translate(100px, 0px);
+    -o-transform: translate(100px, 0px);
+    -moz-transform: translate(100px, 0px);
+
+}
+
+.trasladado2:hover {
+    transform: translate(0, 20px);
+    -ms-transform: translate(0, 20px);
+    -webkit-transform: translate(0, 20px);
+    -o-transform: translate(0, 20px);
+    -moz-transform: translate(0, 20px);
+
+}
+
+.torcer:hover {
+    transform: skew(0, 20deg);
+    -ms-transform: skew(0, 20deg);
+    -webkit-transform: skew(0, 20deg);
+    -o-transform: skew(0, 20deg);
+    -moz-transform: skew(0, 20deg);
+
+}
+
+.mutiplestrasnf:hover {
+    transform: translate(100px, 0px) scale(1.2, 1) rotate(5deg);
+    -ms-transform: translate(100px, 0px) scale(1.2, 1) rotate(5deg);
+    -webkit-transform: translate(100px, 0px) scale(1.2, 1) rotate(5deg);
+    -o-transform: translate(100px, 0px) scale(1.2, 1) rotate(5deg);
+    -moz-transform: translate(100px, 0px) scale(1.2, 1) rotate(5deg);
+
+}
+
+.opacidad {
+    width: 60%;
+    transition: 1s;
+}
+
+.opacidad90:hover {
+    opacity: 0.9;
+}
+
+.opacidad60:hover {
+    opacity: 0.6;
+}
+
+.opacidad30:hover {
+    opacity: 0.3;
+}
+
+.div_opacidad_30 {
+    background-image: url("../img/imagen\ base.jpg");
+    opacity: 0.5;
+    width: 640px;
+    height: auto;
+    margin: 10px auto;
+}
+
+.columnas1 {
+    column-count: 4;
+    column-gap: 40px;
+    column-rule-style: solid;
+    column-rule-width: 3px;
+    column-rule-color: lightblue;
+
+}
+
+.columnas2 {
+    column-width: 200px;
+    column-gap: 40px;
+    column-rule-style: solid;
+    column-rule-width: 3px;
+    column-rule-color: lightblue;
+
+}
+
+.fondos {
+    width: 640px;
+    height: 480px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.fondos1 {
+
+
+    background-image: url("../img/amazon_PNG13.png"), url("../img/imagen\ base.jpg");
+    background-repeat: no-repeat;
+}
+
+.fondos2 {
+
+    background-image: url("../img/amazon_PNG13.png"), url("../img/imagen\ base.jpg");
+    background-repeat: no-repeat;
+    background-position: 0 50%, 0% 0%;
+}
+
+@font-face {
+    font-family: mifuente;
+    src: url(../font/ProtestRiot-Regular.ttf);
+}
+
+@font-face {
+    font-family: mifuente2;
+    src: url(../font/Sixtyfour.ttf);
+}
+
+.mifuente {
+    font-family: mifuente;
+    font-size: 20px;
+    padding: 10px;
+    width: 80%;
+    margin: 10px auto;
+    background-color: rgba(95, 158, 160, 0.25);
+    border-radius: 5px;
+}
+
+.mifuente2 {
+    font-family: mifuente2;
+    font-size: 20px;
+    padding: 10px;
+    width: 80%;
+    margin: 10px auto;
+    background-color: rgba(95, 158, 160, 0.25);
+    border-radius: 5px;
+}
+
+.transicion1 {
+    width: 300px;
+    color: blue;
+    font-size: 25px;
+    font-weight: bold;
+    border: 1px solid black;
+    margin: 10px auto;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: white;
+    transition: color 2s, font-size 3s, background-color 5s;
+}
+
+.transicion1:hover {
+    color: white;
+    background-color: blue;
+    font-size: 25px;
+}
+
+#fondocaja {
+    margin: 20px auto;
+    width: 90%;
+    height: 120px;
+    border-radius: 20px;
+    background-color: rgb(159, 159, 255);
+    position: relative;
+}
+
+#cuadrado {
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    background-color: white;
+    position: relative;
+    text-align: center;
+    top: 20px;
+    left: 20px;
+    transition: all 2s linear;
+    -moz-transition: all 2s linear;
+    -webkit-transition: all 2s linear;
+    -o-transition: all 2s linear;
+}
+
+.contenedor-botones {
+    text-align: center;
+}
+
+.boton {
+    padding: 5px;
+}
+
+.boton:hover {
+    cursor: pointer;
+}
+
+#recuadro1 {
+    text-align: center;
+    color: white;
+    left: 20px;
+    position: relative;
+    border-radius: 20px;
+    background-color: #ddd;
+    width: 200px;
+    height: 100px;
+    padding: 4px;
+    animation-name: animacion1;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    -moz-animation-name: animacion1;
+    -moz-animation-duration: 4s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-direction: alternate;
+    -webkit-animation-name: animacion1;
+    -webkit-animation-duration: 4s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+}
+
+@keyframes animacion1 {
+    from {
+        left: 20px;
+        background-color: blue;
+    }
+
+    to {
+        left: 80%;
+        background-color: red;
+    }
+}
+
+.anim2 {
+    animation-name: animacion2;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
+}
+
+@keyframes animacion2 {
+    from {
+        background-position: 0 50%, 0% 0%;
+    }
+
+    to {
+        background-position: 90% 10%, 0% 0%;
+        
+    }
+}
+
+#recuadro2 {
+    text-align: center;
+    color: white;
+    left: 20px;
+    position: relative;
+    border-radius: 20px;
+    background-color: blue;
+    width: 200px;
+    height: 100px;
+    padding: 4px;
+    animation-name: animacion3;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    
+}
+
+@keyframes animacion3 {
+    from {
+        left: 20px;
+        background-color: blue;
+    }
+
+    to {
+        left: 90%;
+        background-color: red;
+        
+    }
+}
+
+

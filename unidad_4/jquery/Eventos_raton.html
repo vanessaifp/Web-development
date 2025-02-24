@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Evento jQUERY</title>
+  <link rel='stylesheet' href='css/styles.css' type='text/css' media='screen' charset='utf-8' />
+  <script type="text/javascript" src="js/jquery-3.7.1.min.js">
+  </script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $("#parrafo1").click(function () {
+        $(this).css("color", "red");
+      });
+      $("#parrafo1").dblclick(function () {
+        $(this).css("color", "black");
+      });
+      $("#parrafo2").mousedown(function () {
+        $(this).css("color", "yellow");
+      });
+      $("#parrafo2").mouseup(function () {
+        $(this).css("color", "black");
+      });
+      $("#parrafo3").hover(
+        function () {
+          $(this).css("background-color", "yellow");
+        },
+        function () {
+          $(this).css("background-color", "");
+        });
+      $("#parrafo4").hover(function () {
+        $(this).css({
+          "scale": "1.5", "color": "red", "transition": "1s"
+        })
+      },
+        function () {
+          $(this).css({
+            "scale": "1", "color": "black", "transition": "0.5s"
+          });
+        })
+      var x = 0;
+      $("#suma").click(function () {
+        $("#parrafo3").text(x += 1)
+      })
+      $("#resta").click(function () {
+        $("#parrafo3").text(x -= 1)
+      })
+      $("#multiplica").click(function () {
+        $("#parrafo3").text(x *= 2)
+      })
+      $("#divide").click(function () {
+        $("#parrafo3").text(x /= 2)
+      })
+      $("#btn_codigo").click(function () {
+        $("img").toggle("1000");
+      })
+    });  </script>
+
+
+</head>
+
+<body>
+  <header>
+    <h1>JQUERY</h1>
+  </header>
+  <nav>
+    <a href="../index.html">Volver a unidad 4 </a>
+  </nav>
+  <div class="principal">
+    <h2>Eventos de ratón</h2>
+    <h3>Vamos a conocer los diferentes eventos de ratón</h3>
+    <p id="parrafo1">Haz click aquí para cambiar el estilo y doble click para volver al inicial</p>
+    <p id="parrafo2">Pulsa y suelta el ratón (mousedown y mouseup)</p>
+    <p id="parrafo4">Pon el ratón encima (hover)</p>
+    <button id="suma" class="boton_ul">Añade</button>
+    <button id="resta" class="boton_ul">Resta</button>
+    <button id="multiplica" class="boton_ul">Multiplica x 2</button>
+    <button id="divide" class="boton_ul">Divide / 2</button><br>
+    <p>Contador: <span id="parrafo3">0</span></p>
+
+  </div>
+  <footer>
+    <p>Todos los derechos reservados</p>
+    <p>Vanessa Figueroa - 2025</p>
+  </footer>
+</body>
+
+</html>
