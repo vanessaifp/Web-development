@@ -1,0 +1,28 @@
+    function validacion() {
+      let opciones = document.getElementsByName("respuesta");
+      let seleccion = false;
+      let respuestaCorrecta = "1789"; // Respuesta correcta
+      let mensaje = document.getElementById("texto");
+
+      for (let i = 0; i < opciones.length; i++) {
+        if (opciones[i].checked) {
+          seleccion = true;
+
+          if (opciones[i].value === respuestaCorrecta) {
+            mensaje.innerHTML = "<span style='color: green;'>¡Correcto! La Revolución Francesa inició en 1789.</span>";
+            alert("¡Respuesta correcta!");
+          } else {
+            mensaje.innerHTML = "<span style='color: red;'>Incorrecto. La Revolución Francesa inició en 1789.</span>";
+            alert("Respuesta incorrecta.");
+          }
+          return false; // Evita que el formulario se envíe
+        }
+      }
+
+      if (!seleccion) {
+        alert("Debes seleccionar una opción.");
+        mensaje.innerHTML = "<span style='color: red;'>Por favor, selecciona una respuesta.</span>";
+        return false;
+      }
+    }
+ 
